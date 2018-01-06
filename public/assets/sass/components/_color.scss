@@ -139,8 +139,12 @@ $light-blue: (
   "accent-4":    #0091ea
 );
 
-$test-blue: (
-  "base":#f0f8ff
+$alice-blue: (
+  "base":     #f0f8ff,
+  "medium-1": #C4E3FF,
+  "medium-2": #7FC2FF,
+  "darken-1": #B0D9FE,
+  "darken-2": #A2D1FB
 );
 
 
@@ -349,7 +353,7 @@ $colors: (
   "purple": $purple,
   "deep-purple": $deep-purple,
   "indigo": $indigo,
-  "test-blue": $test-blue,
+  "alice-blue": $alice-blue,
   "blue": $blue,
   "light-blue": $light-blue,
   "cyan": $cyan,

@@ -9,12 +9,14 @@ $(document).ready(function(){
         // venues = {
         //   name: $(this).data("name")
         // }
-         $(".venue-results").append("<p>this is a venue name</p>");
+         $(".venue-name").append("<p>this is a venue name</p>");
+         $(".venue-address").append("<p>this is a venue address</p>");
+         $(".venue-loc").append("<p>this is the venue location</p>");
 
       $.get( "/api/venues", function(data){
       location.reload();
-      console.log("this is get a request");
-      $(".venue-results").append("<p>this is a venue name</p>")
+      console.log("this is a get request");
+
     }, "json");
 
     })
