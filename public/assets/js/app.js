@@ -1,22 +1,28 @@
+// Declare an object of Dummy Data to test the JQuery With
+
+var venues = {
+  name: "The Hideaway",
+  address: "555 Address Lane",
+  phone: "(555)555-5555",
+  cap: "300"
+};
 
 $(document).ready(function(){
-
   // this is the venue button
   $("#venue-id").on("click", function(event){
         event.preventDefault();
   // input venue data here
-    console.log("this venue button works")
         // venues = {
         //   name: $(this).data("name")
         // }
-         $(".venue-name").append("<p>this is a venue name</p>");
-         $(".venue-address").append("<p>this is a venue address</p>");
-         $(".venue-loc").append("<p>this is the venue location</p>");
+         $(".venue-name").text(venues.name);
+         $(".venue-address").text("Location: " + venues.address);
+         $(".venue-phone").text("Phone: " + venues.phone);
+         $(".venue-cap").text("Max Capacity: " + venues.cap);
 
       $.get( "/api/venues", function(data){
       location.reload();
       console.log("this is a get request");
-
     }, "json");
 
     })
