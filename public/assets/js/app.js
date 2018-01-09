@@ -27,8 +27,12 @@ $(document).ready(function(){
 
     })
 
+
+
 });
 
+
+ $('.collapsible').collapsible();
 
 
 // function recipeReturn(ID) {

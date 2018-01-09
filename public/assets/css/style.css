@@ -1,13 +1,17 @@
 /* Custom Styles not Using Sass Compiler*/
-.wrapper1 {
 
-}
 .main-img, .responsive-img {
   background-image: url(../images/peony4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
 }
+
+ .nav-bg, body {
+  background-color: #FFFFF0;
+}
+
+
 
 .materialize-red {
   background-color: #e51c23 !important; }
