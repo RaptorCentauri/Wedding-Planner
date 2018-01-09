@@ -143,7 +143,7 @@ module.exports = function(app) {
     //code here
   });
   app.put(`/api/:bridalshops`, function(req, res){
-    //ode here
+    //code here
   });
   app.put(`/api/:music`, function(req, res){
     //code here
