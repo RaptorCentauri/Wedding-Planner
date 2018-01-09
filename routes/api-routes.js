@@ -1,4 +1,4 @@
-//Require models from models direcrtory
+//Require models from models directory
 // var Venue = require('../models/venue.js');
 // var Music = require('../models/music.js');
 // var Flowers = require('../models/flowers.js');
@@ -12,7 +12,7 @@ module.exports = function(app) {
     if (req.params.venues) {
         db.Venue.findOne({
           where: {
-            routeName: req.params.characters
+            id: req.params.id
           }
         }).then(function(result){
           return res.json(result);
@@ -31,7 +31,7 @@ module.exports = function(app) {
     if (req.params.bridalshops) {
       db.BridalShop.findOne({
         where: {
-          routeName: req.params.bridalshops
+          id: req.params.id
         }
       }).then(function(result) {
         return res.json(result);
@@ -48,7 +48,11 @@ module.exports = function(app) {
   //music
   app.get('/api/:music?', function(req, res) {
     if (req.params.music) {
-      db.Music.findOne({})
+      db.Music.findOne({
+        where: {
+          id: req.params.id
+        }
+      })
       .then(function(result) {
         return res.json(result);
       });
@@ -66,7 +70,7 @@ module.exports = function(app) {
     if (req.params.flowers) {
       db.Flowers.findOne({
        where: { 
-          routeName: req.params.flowers
+          routeName: id: req.params.id
        }
       })
       .then(function(result) {
@@ -140,16 +144,65 @@ module.exports = function(app) {
 
   //update
   app.put(`/api/:venues`, function(req, res){
-    //code here
-  });
-  app.put(`/api/:bridalshops`, function(req, res){
-    //code here
-  });
-  app.put(`/api/:music`, function(req, res){
-    //code here
-  });
-  app.put(`/api/:flowers`, function(req, res){
-    //code here
+      db.Venue.update({
+        name: venue.name,
+        address: venue.address,
+        location: venue.location,
+        capacity: venue.capacity,
+        phone: venue.phone,
+        cost: venue.cost
+      }, {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function(result) {
+        res.json(result);
+      });
   });
 
+  app.put(`/api/:bridalshops`, function(req, res){
+      db.BridalShop.update({
+        name: bridalshop.name,
+        address: bridalshop.address,
+        phone: bridalshop.phone,
+        email: bridalshop.email,
+        cost: bridalshop.cost
+      }, {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function(result) {
+        res.json(result);
+      });
+  });
+
+  app.put(`/api/:music`, function(req, res){
+      db.Music.update({
+        name: music.name,
+        phone: music.phone,
+        email: music.email,
+        cost: music.cost
+      }, {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function(result) {
+        res.json(result);
+      });
+  });
+
+  app.put(`/api/:flowers`, function(req, res){
+      db.Flower.update({
+        name: flower.name,
+        phone: flower.phone,
+        email: flower.email,
+        cost: flower.cost
+      })
+      .then(function(result) {
+        res.json(result);
+      });
+  });
 };
