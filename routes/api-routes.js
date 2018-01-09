@@ -200,6 +200,10 @@ module.exports = function(app) {
         phone: flower.phone,
         email: flower.email,
         cost: flower.cost
+      }, {
+        where:
+        id: req.body.id
+        }
       })
       .then(function(result) {
         res.json(result);
