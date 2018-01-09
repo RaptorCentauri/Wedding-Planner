@@ -1,0 +1,18 @@
+/* Custom Styles not Using Sass Compiler*/
+
+.main-img, .responsive-img {
+  background-image: url(../images/peony4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.nav-bg, body {
+  background-color: #FFFFF0;
+}
+
+.opacity-style {
+  background-color: aliceblue;
+  opacity: .6;
+
+}
