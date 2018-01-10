@@ -1,10 +1,10 @@
 /* Custom Styles not Using Sass Compiler*/
 
 .main-img, .responsive-img {
-  background-image: url(../images/peony4.jpg);
+  background-image: url(../images/peony2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 415px;
 }
 
 .nav-bg, body {
@@ -16,3 +16,11 @@
   opacity: .6;
 
 }
+
+/*.brand-logo {
+	margin-left: 10px;	
+}
+
+#nav-mobile {
+	
+}*/
