@@ -21,13 +21,23 @@
   font-weight: 100;
 }
 
+.card-content {
+  height: 250px;
+
+}
+
 #venue-card {
   background-image: url(../images/venue1.jpg);
   background-position: center;
 }
 
-#flower-card {
-  background-image: url(../images/flower-card.jpg);
+#flowers-card {
+  background-image: url(../images/peony1.jpg);
+  background-position: center;
+}
+
+#music-card {
+  background-image: url(../images/music1.jpg);
   background-position: center;
 }
 
@@ -48,7 +58,7 @@
 }
 
 #about-header, #about-section, #connect-header, #connect-section {
-  text-align: center;
+  text-align: right;
 }
 
 .venue-card {
