@@ -34,6 +34,7 @@ $(document).ready(function(){
                       <p class="title venue-cap">${venCap}</p>
                     </div>
                     <div class="card-action">
+                      <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
                       <a href="#">Add to Planner</a>
                     </div>
                   </div>
@@ -46,8 +47,23 @@ $(document).ready(function(){
     })
 
 
-
 });
+
+
+$(document.body).on("click", ".addVenuePlanner", function(){
+  console.log("click working");
+
+  // let blah = this.data("data-id");
+  $(".venuePlanner").html("test append");
+
+  console.log(this);
+  // console.log(blah);
+
+
+
+
+
+})
 
 
  $('.collapsible').collapsible();
