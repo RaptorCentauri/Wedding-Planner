@@ -36,7 +36,7 @@ $(document).ready(function(){
             </div>
             <div class="card-action">
               <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
-              <a href="#">Add to Planner</a>
+              <a class="addVenuePlanner" data-id="${i}" href="#">Add to Planner</a>
             </div>
           </div>
         </div>`
