@@ -19,6 +19,6 @@ require(`./routes/api-routes.js`)(app);
 require(`./routes/html-routes.js`)(app);
 
 //Start the Server
-app.listen(port, function(){
-  console.log(`App listening on port ${port}`);
-});
+  app.listen(port, function(){
+    console.log(`App listening on port ${port}`);
+  });

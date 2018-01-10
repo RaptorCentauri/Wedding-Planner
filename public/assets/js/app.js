@@ -1,29 +1,46 @@
 // Declare an object of Dummy Data to test the JQuery With
 
-var venues = {
-  name: "The Hideaway",
-  address: "555 Address Lane",
-  phone: "(555)555-5555",
-  cap: "300"
-};
+// var venues = {
+//   name: "The Hideaway",
+//   address: "555 Address Lane",
+//   phone: "(555)555-5555",
+//   cap: "300"
+// };
 
 $(document).ready(function(){
   // this is the venue button
   $("#venue-id").on("click", function(event){
+    $(".infoRow").empty();
         event.preventDefault();
-  // input venue data here
-        // venues = {
-        //   name: $(this).data("name")
-        // }
-         $(".venue-name").text(venues.name);
-         $(".venue-address").text("Location: " + venues.address);
-         $(".venue-phone").text("Phone: " + venues.phone);
-         $(".venue-cap").text("Max Capacity: " + venues.cap);
 
       $.get( "/api/venues", function(data){
-      location.reload();
       console.log("DATA: ", data);
       console.log("this is a get request");
+      for(var i = 0; i < data.length; i ++){
+        var venName = data[i].name;
+        var venAdd = data[i].address;
+        var venLoc = data[i].location;
+        var venCap = data[i].capacity;
+        var venPhone = data[i].phone;
+        var venCost = data[i].cost;
+
+        $(".infoRow").append(
+                  `<div class="col s6 m4">
+                  <div class="card alice-blue">
+                    <div class="card-content grey-text text-darken-3">
+                      <span class="card-title venue-name">${venName}</span>
+                      <p class="title venue-address">${venAdd}</p>
+                      <p class="title venue-phone">${venPhone}</p>
+                      <p class="title venue-cap">${venCap}</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">Add to Planner</a>
+                    </div>
+                  </div>
+                </div>`
+        );
+
+    }
     }, "json");
 
     })

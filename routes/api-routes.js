@@ -108,43 +108,41 @@ module.exports = function(app) {
   });
 
   app.post(`/api/bridalshops`, function(req, res){
-      var bridalshop = req.body;
-      var routeName = bridalshop.name.replace(/\s+/g, "").toLowerCase();
-
-     db.BridalShop.create({
-        routeName: routeName,
-        name: bridalshop.name,
-        address: bridalshop.address,
-        phone: bridalshop.phone,
-        email: bridalshop.email,
-        cost: bridalshop.cost
-      });
+     db.bridal_shop.create({
+        name: req.body.name,
+        address: req.body.address,
+        phone: req.body.phone,
+        email: req.body.email,
+        cost: req.body.cost
+      }).then(function(result) {
+        console.log("done");
+          // return(result);
+        });;;
   });
 
   app.post(`/api/music`, function(req, res){
-      var music = req.body;
-      var routeName = music.name.replace(/\s+/g, "").toLowerCase();
-
-      db.Music.create({
-        routeName: routeName,
-        name: music.name,
-        phone: music.phone,
-        email: music.email,
-        cost: music.cost
-      });
+      db.music.create({
+        name: req.body.name,
+        phone: req.body.phone,
+        email: req.body.email,
+        cost: req.body.cost
+      }).then(function(result) {
+        console.log("done");
+          // return(result);
+        });;;
   });
 
   app.post(`/api/flowers`, function(req, res){
-      var flower = req.body;
-      var routeName = flower.name.replace(/\s+/g, "").toLowerCase();
 
-     db.Flowers.create({
-        routeName: routeName,
-        name: flower.name,
-        phone: flower.phone,
-        email: flower.email,
-        cost: flower.cost
-      });
+     db.flowers.create({
+        name: req.body.name,
+        phone: req.body.phone,
+        email: req.body.email,
+        cost: req.body.cost
+      }).then(function(result) {
+        console.log("done");
+          // return(result);
+        });;;
   });
 
   //update
