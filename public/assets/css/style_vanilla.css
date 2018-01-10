@@ -14,9 +14,32 @@
   background-color: aliceblue;
 }
 
+/*.text-center {
+	background-image: url(../images/crossword.png);
+}*/
+
 .opacity-style {
   background-color: aliceblue;
   opacity: .6;
+<<<<<<< HEAD
+}
+
+.page-footer {
+	background-image: url(../images/banner.png)
+	/*background-color: #7EA6CF;*/
+	/*background-color: #718EAC;*/
+}
+
+.venue-card {
+  background-image: url(../images/venue1.jpg);
+  height: 400px;
+  width: 400px;
+}
+
+.footer-copyright {
+	background-color: grey;
+=======
+>>>>>>> 2168671dfb73efb1bdfac36b2da045ee5fc5ba9d
 }
 
 .brand-logo {
