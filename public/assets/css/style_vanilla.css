@@ -1,4 +1,7 @@
 /* Custom Styles not Using Sass Compiler*/
+ body {
+  background-color: #FFFFF0;
+}
 
 .main-img, .responsive-img {
   background-image: url(../images/peony2.jpg);
@@ -7,8 +10,8 @@
   min-height: 415px;
 }
 
-.nav-bg, body {
-  background-color: #FFFFF0;
+.nav-bg {
+  background-color: aliceblue;
 }
 
 /*.text-center {
@@ -18,6 +21,7 @@
 .opacity-style {
   background-color: aliceblue;
   opacity: .6;
+<<<<<<< HEAD
 }
 
 .page-footer {
@@ -34,12 +38,14 @@
 
 .footer-copyright {
 	background-color: grey;
+=======
+>>>>>>> 2168671dfb73efb1bdfac36b2da045ee5fc5ba9d
 }
 
-/*.brand-logo {
-	margin-left: 10px;	
+.brand-logo {
+	margin-left: 40px;
 }
 
 #nav-mobile {
-	
-}*/
+
+}

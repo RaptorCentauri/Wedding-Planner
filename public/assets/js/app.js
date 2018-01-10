@@ -25,20 +25,20 @@ $(document).ready(function(){
         var venCost = data[i].cost;
 
         $(".infoRow").append(
-                  `<div class="col s6 m4">
-                  <div class="card alice-blue">
-                    <div class="card-content grey-text text-darken-3">
-                      <span class="card-title venue-name">${venName}</span>
-                      <p class="title venue-address">${venAdd}</p>
-                      <p class="title venue-phone">${venPhone}</p>
-                      <p class="title venue-cap">${venCap}</p>
-                    </div>
-                    <div class="card-action">
-                      <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
-                      <a href="#">Add to Planner</a>
-                    </div>
-                  </div>
-                </div>`
+        //   `<div class="col s6 m4">
+        //   <div class="card alice-blue">
+        //     <div class="card-content grey-text text-darken-3">
+        //       <span class="card-title venue-name">${venName}</span>
+        //       <p class="title venue-address">${venAdd}</p>
+        //       <p class="title venue-phone">${venPhone}</p>
+        //       <p class="title venue-cap">${venCap}</p>
+        //     </div>
+        //     <div class="card-action">
+        //       <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
+        //       <a href="#">Add to Planner</a>
+        //     </div>
+        //   </div>
+        // </div>`
         );
 
     }
