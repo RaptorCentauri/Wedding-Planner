@@ -14,20 +14,32 @@
   background-color: aliceblue;
 }
 
-/*.text-center {
-	background-image: url(../images/crossword.png);
-}*/
+#logo {
+  text-align: left;
+  margin-left: 10px;
+  font-weight: 100;
+}
+
+h5 {
+  text-align: left;
+}
 
 .opacity-style {
   background-color: aliceblue;
   opacity: .6;
-<<<<<<< HEAD
 }
 
 .page-footer {
-	background-image: url(../images/banner.png)
+	background-image: url(../images/banner.png);
+  float: left;
+  width: 100%;
+  background-size: 100%;
 	/*background-color: #7EA6CF;*/
 	/*background-color: #718EAC;*/
+}
+
+#about-header, #about-section, #connect-header, #connect-section {
+  text-align: center;
 }
 
 .venue-card {
@@ -38,14 +50,5 @@
 
 .footer-copyright {
 	background-color: grey;
-=======
->>>>>>> 2168671dfb73efb1bdfac36b2da045ee5fc5ba9d
 }
 
-.brand-logo {
-	margin-left: 40px;
-}
-
-#nav-mobile {
-
-}
