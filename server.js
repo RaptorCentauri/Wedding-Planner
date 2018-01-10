@@ -15,7 +15,7 @@ app.use(bodyParser.text());
 app.use(express.static(`public/`));
 
 //Routes
-// require(`./routes/api-routes.js`)(app);
+require(`./routes/api-routes.js`)(app);
 require(`./routes/html-routes.js`)(app);
 
 //Start the Server

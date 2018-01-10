@@ -3,23 +3,23 @@
 // var Music = require('../models/music.js');
 // var Flowers = require('../models/flowers.js');
 // var BridalShop = require('../models/bridalShops.js');
-var db = require('..models')
+var db = require('../models');
 
 module.exports = function(app) {
 //get routes
  //venues
-  app.get(`/api/:venues?`, function(req, res){
+  app.get(`/api/venues/:venues?`, function(req, res){
     if (req.params.venues) {
-        db.Venue.findOne({
+        db.venue.findOne({
           where: {
             id: req.params.id
           }
         }).then(function(result){
           return res.json(result);
         });
-      } 
+      }
       else {
-        db.Venue.findAll({})
+        db.venue.findAll({})
         .then(function(result) {
           return res.json(result);
         });
@@ -27,18 +27,18 @@ module.exports = function(app) {
     });
 
   //bridalshops
-  app.get('/api/:bridalshops?', function(req, res) {
+  app.get('/api/bridalshops/:bridalshops?', function(req, res) {
     if (req.params.bridalshops) {
-      db.BridalShop.findOne({
+      db.bridal_shop.findOne({
         where: {
           id: req.params.id
         }
       }).then(function(result) {
         return res.json(result);
       });
-    } 
+    }
     else {
-      db.BridalShop.findAll({})
+      db.bridal_shop.findAll({})
       .then(function(result) {
         return res.json(result);
       });
@@ -46,9 +46,9 @@ module.exports = function(app) {
   });
 
   //music
-  app.get('/api/:music?', function(req, res) {
+  app.get('/api/music/:music?', function(req, res) {
     if (req.params.music) {
-      db.Music.findOne({
+      db.music.findOne({
         where: {
           id: req.params.id
         }
@@ -56,9 +56,9 @@ module.exports = function(app) {
       .then(function(result) {
         return res.json(result);
       });
-    } 
+    }
     else {
-      db.Music.findAll({})
+      db.music.findAll({})
         .then(function(result) {
           return res.json(result);
         });
@@ -66,11 +66,11 @@ module.exports = function(app) {
   });
 
   //flowers
-  app.get('./api/:flowers?', function(req, res) {
+  app.get('/api/flowers/:flowers?', function(req, res) {
     if (req.params.flowers) {
-      db.Flowers.findOne({
-       where: { 
-          routeName: id: req.params.id
+      db.flowers.findOne({
+       where: {
+          id: req.params.id
        }
       })
       .then(function(result) {
@@ -78,7 +78,7 @@ module.exports = function(app) {
       });
     }
     else {
-      db.Flowers.findAll({})
+      db.flowers.findAll({})
         .then(function(result) {
           return res.json(result);
         });
@@ -88,18 +88,24 @@ module.exports = function(app) {
 
 //post route
   app.post(`/api/venues`, function(req, res){
-      var venues = req.body;
-      var routeName = venue.name.replace(/\s+/g, "").toLowerCase();
+    console.log(`LOOK HERE===============`);
+    console.log(req.body);
+    console.log(`========================`);
+      // var venue = req.body;
+      // var routeName = venue.name.replace(/\s+/g, "").toLowerCase();
 
-      db.Venue.create({
-        routeName: routeName,
-        name: venue.name,
-        address: venue.address,
-        location: venue.location,
-        capacity: venue.capacity,
-        phone: venue.phone,
-        cost: venue.cost
-      });
+      db.venue.create({
+        // routeName: routeName,
+        name: req.body.name,
+        address: req.body.address,
+        location: req.body.location,
+        capacity: req.body.capacity,
+        phone: req.body.phone,
+        cost: req.body.cost
+      }).then(function(result) {
+        console.log("done");
+          // return(result);
+        });;
   });
 
   app.post(`/api/bridalshops`, function(req, res){
@@ -201,7 +207,7 @@ module.exports = function(app) {
         email: flower.email,
         cost: flower.cost
       }, {
-        where:
+        where:{
         id: req.body.id
         }
       })
