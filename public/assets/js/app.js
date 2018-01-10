@@ -22,6 +22,7 @@ $(document).ready(function(){
 
       $.get( "/api/venues", function(data){
       location.reload();
+      console.log("DATA: ", data);
       console.log("this is a get request");
     }, "json");
 
