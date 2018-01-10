@@ -8,6 +8,7 @@ var db = require('../models');
 module.exports = function(app) {
 //get routes
  //venues
+
   app.get(`/api/venues/:venues?`, function(req, res){
     if (req.params.venues) {
         db.venue.findOne({
@@ -21,6 +22,8 @@ module.exports = function(app) {
       else {
         db.venue.findAll({})
         .then(function(result) {
+          console.log("made a get request to venues");
+          console.log(result);
           return res.json(result);
         });
       }
@@ -88,14 +91,10 @@ module.exports = function(app) {
 
 //post route
   app.post(`/api/venues`, function(req, res){
-    console.log(`LOOK HERE===============`);
-    console.log(req.body);
-    console.log(`========================`);
-      // var venue = req.body;
-      // var routeName = venue.name.replace(/\s+/g, "").toLowerCase();
-
+    // console.log(`LOOK HERE===============`);
+    // console.log(req.body);
+    // console.log(`========================`);
       db.venue.create({
-        // routeName: routeName,
         name: req.body.name,
         address: req.body.address,
         location: req.body.location,
