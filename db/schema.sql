@@ -14,7 +14,7 @@ cost INT(100) NOT NULL,
 primary key(id)
 );
 
-CREATE TABLE music (
+CREATE TABLE musics (
 id INT auto_increment NOT NULL,
 name VARCHAR(100) NOT NULL,
 phone VARCHAR(15) NOT NULL,
