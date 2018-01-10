@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "Zui30*read",
+    "password": "cr8lifenow222",
     "database": "wedding_planner_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Zui30*read",
+    "password": "cr8lifenow222",
     "database": "wedding_planner_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Zui30*read",
+    "password": "cr8lifenow222",
     "database": "wedding_planner_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

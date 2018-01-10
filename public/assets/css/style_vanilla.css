@@ -7,20 +7,24 @@
   min-height: 415px;
 }
 
-.nav-bg, body {
+ body {
   background-color: #FFFFF0;
+}
+.nav-bg {
+  background-color: aliceblue;
 }
 
 .opacity-style {
   background-color: aliceblue;
   opacity: .6;
-
 }
 
+
+
 /*.brand-logo {
-	margin-left: 10px;	
+	margin-left: 10px;
 }
 
 #nav-mobile {
-	
+
 }*/

@@ -3,7 +3,7 @@ CREATE DATABASE wedding_planner_db;
 
 USE wedding_planner_db;
 
-CREATE TABLE venue (
+CREATE TABLE venues (
 id INT auto_increment NOT NULL,
 name VARCHAR(100) NOT NULL,
 address VARCHAR(100) NOT NULL,
@@ -32,7 +32,7 @@ cost INT(100) NOT NULL,
 primary key(id)
 );
 
-CREATE TABLE bridal_shop (
+CREATE TABLE bridal_shops (
 id INT auto_increment NOT NULL,
 name VARCHAR(100) NOT NULL,
 address VARCHAR(100) NOT NULL,

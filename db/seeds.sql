@@ -16,8 +16,8 @@ INSERT INTO music (name, phone, email, cost) VALUES ("Shilander & Smith Band","8
 INSERT INTO music (name, phone, email, cost) VALUES ("The Reception Crashers","3125552332","reserve@receptioncrashers.net", 1250);
 INSERT INTO music (name, phone, email, cost) VALUES ("Groove Machine","8475550921","book@groovemachine.com",900);
 
-INSERT INTO venue (name, address, location, capacity, phone, cost) VALUES ("Kearny Supper Club","7242 N Main St","outdoor", 60,"81855509878", 1300);
-INSERT INTO venue (name, address, location, capacity, phone, cost) VALUES ("The Werbowsky Lounge","35000 Sam Adams Terrace","indoor", 250,"7735556486", 4000);
-INSERT INTO venue (name, address, location, capacity, phone, cost) VALUES ("The Penthouse at The Herman ","5 E Infinity Place 85th Floor","both", 500,"6305551509", 25000);
-INSERT INTO venue (name, address, location, capacity, phone, cost) VALUES ("Storino's","1676 N Lincoln","indoor", 200,"7735559078", 8500);
-INSERT INTO venue (name, address, location, capacity, phone, cost) VALUES ("Karl Thomas' Distillery and Lodge","4242 E Barrel Junction","indoor", 150 ,"8475557424", 12000);
+INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Kearny Supper Club","7242 N Main St","outdoor", 60,"81855509878", 1300);
+INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("The Werbowsky Lounge","35000 Sam Adams Terrace","indoor", 250,"7735556486", 4000);
+INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("The Penthouse at The Herman ","5 E Infinity Place 85th Floor","both", 500,"6305551509", 25000);
+INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Storino's","1676 N Lincoln","indoor", 200,"7735559078", 8500);
+INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Karl Thomas' Distillery and Lodge","4242 E Barrel Junction","indoor", 150 ,"8475557424", 12000);
