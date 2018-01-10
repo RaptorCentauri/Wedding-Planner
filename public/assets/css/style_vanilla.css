@@ -1,4 +1,7 @@
 /* Custom Styles not Using Sass Compiler*/
+ body {
+  background-color: #FFFFF0;
+}
 
 .main-img, .responsive-img {
   background-image: url(../images/peony2.jpg);
@@ -7,9 +10,6 @@
   min-height: 415px;
 }
 
- body {
-  background-color: #FFFFF0;
-}
 .nav-bg {
   background-color: aliceblue;
 }
@@ -19,12 +19,10 @@
   opacity: .6;
 }
 
-
-
-/*.brand-logo {
-	margin-left: 10px;
+.brand-logo {
+	margin-left: 40px;
 }
 
 #nav-mobile {
 
-}*/
+}
