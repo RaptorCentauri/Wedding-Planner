@@ -17,8 +17,9 @@
 #logo {
   /*position: relative;*/
   text-align: left;
-  margin-left: 10px;
-  font-weight: 100;
+  margin-left: 20px;
+  font-weight: 300;
+  font-family: 'League Script', cursive;
 }
 
 .card-content {
@@ -71,7 +72,5 @@
 	background-color: grey;
 }
 
-.brand-logo {
-	margin-left: 40px;
-}
+
 
