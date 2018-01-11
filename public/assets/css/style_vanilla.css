@@ -22,6 +22,11 @@
   font-family: 'League Script', cursive;
 }
 
+/*.card {
+  width: 400px;
+  height: 400px;
+}*/
+
 .card-content {
   height: 250px;
 
