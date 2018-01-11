@@ -17,7 +17,7 @@
 #logo {
   /*position: relative;*/
   text-align: left;
-  margin-left: 20px;
+  margin: 20px 0px 0px 20px;
   font-weight: 300;
   font-family: 'League Script', cursive;
 }
@@ -53,10 +53,11 @@
   float: left;
   width: 100%;
   background-size: 115%;
-
-	/*background-color: #7EA6CF;*/
-	/*background-color: #718EAC;*/
 }
+
+/*#footer-img {
+  opacity: 0.5;
+}*/
 
 #about-header, #about-section, #connect-header, #connect-section {
   text-align: right;
@@ -68,9 +69,9 @@
   width: 400px;
 }
 
-.footer-copyright {
+/*.footer-copyright {
 	background-color: grey;
-}
+}*/
 
 
 
