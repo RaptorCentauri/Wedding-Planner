@@ -23,32 +23,29 @@ $(document).ready(function(){
         var venCap = data[i].capacity;
         var venPhone = data[i].phone;
         var venCost = data[i].cost;
-        console.log(venName);
 
         $(".infoRow").append(
-          `<div class="col s6 m6 l4">
-          <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <p class="title venue-name">${venName}</span>
-              <p class="title venue-address">${venAdd}</p>
-              <p class="title venue-phone">${venPhone}</p>
-              <p class="title venue-cap">${venCap}</p>
-            </div>
-            <div class="card-action">
-              <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
-              <a class="addVenuePlanner" data-id="${i}" href="#">Add to Planner</a>
-            </div>
-          </div>
-        </div>`
+                  `<div class="col s6 m4">
+                  <div class="card alice-blue">
+                    <div class="card-content grey-text text-darken-3">
+                      <span class="card-title venue-name">${venName}</span>
+                      <p class="title venue-address">${venAdd}</p>
+                      <p class="title venue-phone">${venPhone}</p>
+                      <p class="title venue-cap">${venCap}</p>
+                    </div>
+                    <div class="card-action">
+                      <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
+                      <a href="#">Add to Planner</a>
+                    </div>
+                  </div>
+                </div>`
         );
-
     }
     }, "json");
 
     })
-
-
 });
+
 
 
 $(document.body).on("click", ".addVenuePlanner", function(){
@@ -60,14 +57,10 @@ $(document.body).on("click", ".addVenuePlanner", function(){
   console.log(this);
   // console.log(blah);
 
-
-
-
-
 })
 
 
- $('.collapsible').collapsible();
+ // $('.collapsible').collapsible();
 
 
 // function recipeReturn(ID) {
