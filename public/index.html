@@ -7,39 +7,29 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|League+Script" rel="stylesheet">
 <!--   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
   <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="assets/css/style_vanilla.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
-<div class="navbar-fixed">
-  <nav class="nav-bg z-depth-3" role="navigation">
-    <h5 class="brand-logo alice-blue-text text-darken-2" id="logo"> Bells & Vows</h5>
-      <ul class="text-center alice-blue">
-      <ul class="text-center">
-        <li ><a href="#" class="grey-text text-darken-4" id="venue-id">Venue</a></li>
-        <li ><a href="#" class="grey-text text-darken-4" id="flower-id">Flowers</a></li>
-        <li ><a href="#" class="grey-text text-darken-4" id="music-id">Music</a></li>
-        <li ><a href="#" class="grey-text text-darken-4" id="bridal-id">Bridal Shops</a></li>
-        <li ><a href="#" class="grey-text text-darken-4" id="diy-id">DIY</a></li>
-      </ul>
-  </nav>
-</div>
-
-<!-- <nav>
-  <div class="nav-bg z-depth-3" role="navigation">
-    <h5 class="brand-logo">Bells & Vows </h5>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li ><a href="#" class="grey-text text-darken-4" id="venue-id">Venue</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Flowers</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Music</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Bridal Shops</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">DIY</a></li>
-      </ul>
+  <!-- NAV -->
+  <div class="navbar-fixed">
+    <nav class="nav-bg z-depth-3" role="navigation">
+      <h5 class="brand-logo alice-blue-text text-darken-2" id="logo"> bells & vows</h5>
+        <ul class="text-center alice-blue">
+        <ul class="text-center">
+          <li ><a href="#" class="grey-text text-darken-4" id="venue-id">Venue</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="flowers-id">Flowers</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="music-id">Music</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="bridal-id">Bridal Shops</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="diy-id">DIY</a></li>
+        </ul>
+    </nav>
   </div>
-</nav> -->
 
+  <!-- BACKGROUND IMG-->
   <div class="main-img col s12 valign-wrapper responsive-img">
     <div class="container">
       <div class="section ">
@@ -59,23 +49,19 @@
       </div>
     </div>
   </div>
+<br>
 
-
-  <div class="container">
+  <!-- CARDS Image Info Cards Section-->
+<!--   <div class="container">
     <div class="section">
-
-      <!--   Image Info Cards Section   -->
-<!--       <div class="infoRow row">
-        <div class="row">
+      <div class="infoRow row">
           <div class="col s12 m7">
-            <div class="card">
+            <div class="card" id="venue-card">
               <div class="card-image">
-                <img src="images/sample-1.jpg">
-                <span class="card-title">Card Title</span>
+                <span class="card-title">Venues</span>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p>The most frustrating part of finding a venue is the initial research. Much like the college application process, venues and their websites are all completely different. They offer a variety of information in various places, and sometimes they don’t offer any information at all, which is even more fun. Try not to get too frustrated by this. If you can’t find answers on a venue’s site, use the spreadsheet to track what info you still need and reach out with your questions via email. Often venues are stingy with info online, but if approached, they have a marketing packet ready to share that has a lot of the initial information you are looking for.</p>
               </div>
               <div class="card-action">
                 <a href="#">See All Venues</a>
@@ -83,47 +69,64 @@
             </div>
           </div>
         </div>
-       </div>  -->
-
-      <div class="infoRow row">
-    <!--     <div class="col s6 m4">
+       </div>
+      </div>
+     </div>  -->
+<!-- Yaeinn's changes Commented out: -->
+<!--       <div class="infoRow row">
+        <div class="col s6 m4">
           <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <span class="card-title venue-name">Venue Placeholder</span>
+            <div class="card-content white-text" id="venue-card">
+              <span class="card-title venue-name">Venues</span>
               <p class="title venue-address">Location</p>
               <p class="title venue-phone">Phone</p>
               <p class="title venue-cap">Capicity</p>
             </div>
             <div class="card-action">
-              <a href="#">Add to Planner</a>
+              <a href="#">See All Venues</a>
             </div>
           </div>
         </div>
 
         <div class="col s6 m4">
           <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <span class="card-title venue-name">Venue Placeholder</span>
+            <div class="card-content white-text" id="flowers-card">
+              <span class="card-title venue-name">Flowers</span>
               <p class="title venue-address">Location</p>
               <p class="title venue-phone">Phone</p>
               <p class="title venue-cap">Capicity</p>
             </div>
             <div class="card-action">
-              <a href="#">Add to Planner</a>
+              <a href="#">See All Floral</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s6 m4">
+          <div class="card alice-blue">
+            <div class="card-content white-text" id="music-card">
+              <span class="card-title venue-name">Music</span>
+              <p class="title venue-address">Location</p>
+              <p class="title venue-phone">Phone</p>
+              <p class="title venue-cap">Capicity</p>
+            </div>
+            <div class="card-action">
+              <a href="#">See All Music</a>
             </div>
           </div>
         </div> -->
-      <!-- end row -->
-      </div>
-   <!--  end section -->
-    </div>
- <!--  end container -->
-  </div>
 
+      <!-- end row -->
+<!--       </div> -->
+   <!--  end section -->
+<!--     </div> -->
+ <!--  end container -->
+<!--   </div> -->
+
+  <!-- PLANNER -->
   <div class="container">
     <div class="row">
       <div class="col s12">
-
         <ul class="collapsible alice-blue" data-collapsible="accordion">
           <h5 class="title center">Planner</h5>
           <li>
@@ -155,6 +158,7 @@
     </div>
   </div>
 
+  <!-- FOOTER-->
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -174,14 +178,12 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright grey-text">
+    <div class="footer-copyright blue-grey white-text">
       <div class="container">
-      Made by <a class="alice-blue-text medium-2 text-lighten-3" href="http://materializecss.com">The Wedding Coders</a>
+      Copyright 2018 | <a class="alice-blue-text medium-2 text-lighten-3" href="http://materializecss.com">The Wedding Coders</a>
       </div>
     </div>
-
   </footer>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
