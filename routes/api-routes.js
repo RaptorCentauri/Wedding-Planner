@@ -1,124 +1,180 @@
-//Require models from models directory
-// var Venue = require('../models/venue.js');
-// var Music = require('../models/music.js');
-// var Flowers = require('../models/flowers.js');
-// var BridalShop = require('../models/bridalShops.js');
-var db = require('../models');
+const account = require('../models/accounts.js');
+const bridalShop = require('../models/bridalShops.js');
+const flower = require('../models/flowers.js');
+const music = require('../models/music.js');
+const venue = require('../models/venues.js');
+const chosenVenue = require('../models/chosenVenues.js');
+const chosenMusic = require('../models/chosenMusic.js');
+const chosenFlower = require('../models/chosenFlowers.js');
+const chosenBridalShop = require('../models/chosenBridalShop.js');
+
 
 module.exports = function(app) {
-//get routes
- //venues
 
-  app.get(`/api/venues/:venues?`, function(req, res){
-    if (req.params.venues) {
-        db.venue.findOne({
-          where: {
-            id: req.params.id
-          }
-        }).then(function(result){
-          return res.json(result);
-        });
-      }
-      else {
-        db.venue.findAll({})
-        .then(function(result) {
-          console.log("made a get request to venues");
-          console.log(result);
-          return res.json(result);
-        });
-      }
-    });
+//=======================================================================================================================================================================
+//VENUE ROUTES
+//=======================================================================================================================================================================
 
-  //bridalshops
-  app.get('/api/bridalshops/:bridalshops?', function(req, res) {
-    if (req.params.bridalshops) {
-      db.bridal_shop.findOne({
-        where: {
-          id: req.params.id
-        }
-      }).then(function(result) {
-        return res.json(result);
-      });
-    }
-    else {
-      db.bridal_shop.findAll({})
-      .then(function(result) {
-        return res.json(result);
-      });
-    }
+//get all venues
+app.get(`/api/venues/`, function(req, res){
+  venue.all(function(result) {
+    res.json(result);
   });
+});
 
-  //music
-  app.get('/api/music/:music?', function(req, res) {
-    if (req.params.music) {
-      db.music.findOne({
-        where: {
-          id: req.params.id
-        }
-      })
-      .then(function(result) {
-        return res.json(result);
-      });
-    }
-    else {
-      db.music.findAll({})
-        .then(function(result) {
-          return res.json(result);
-        });
-    }
+//tie a venue to a user
+app.post(`/api/chosenVenues/`, function(req, res){
+  chosenVenue.add(req.body.accountID, req.body.venueID, function(result) {
+    console.log(result);
+  })
+})
+
+//get all of the users chosen venues
+app.get('/api/chosenVenues/', function(req, res) {
+  if(req.session.username){
+    chosenVenue.all(req.query.accountID, (function(result) {
+      res.json(result);
+    }));
+  }
+  else {
+    console.log(`There is no one logged in right now`);
+  }
+});
+
+//create a new venue
+// app.post(`/api/venues`, function(req, res){
+//     db.venue.create({
+//       name: req.body.name,
+//       address: req.body.address,
+//       location: req.body.location,
+//       capacity: req.body.capacity,
+//       phone: req.body.phone,
+//       cost: req.body.cost
+//     }).then(function(result) {
+//       console.log("venue added");
+//       });;
+// });
+
+//=======================================================================================================================================================================
+//FLOWER ROUTES
+//=======================================================================================================================================================================
+
+//get all flowers
+app.get('/api/flowers/', function(req, res) {
+  flower.all(function(result) {
+    res.json(result);
   });
+});
 
-  //flowers
-  app.get('/api/flowers/:flowers?', function(req, res) {
-    if (req.params.flowers) {
-      db.flowers.findOne({
-       where: {
-          id: req.params.id
-       }
-      })
-      .then(function(result) {
-        return res.json(result);
-      });
-    }
-    else {
-      db.flowers.findAll({})
-        .then(function(result) {
-          return res.json(result);
-        });
-    }
+//tie a flower to a user
+app.post(`/api/chosenFlowers/`, function(req, res){
+  chosenFlower.add(req.body.accountID, req.body.flowerID, function(result) {
+    console.log(result);
+  })
+})
+
+//get all of the users chosen flowers
+app.get('/api/chosenFlowers/', function(req, res) {
+  if(req.session.username){
+    chosenFlower.all(req.query.accountID, (function(result) {
+      res.json(result);
+    }));
+  }
+  else {
+    console.log(`There is no one logged in right now`);
+  }
+});
+
+
+//create new venue
+app.post(`/api/flowers`, function(req, res){
+   db.flowers.create({
+      name: req.body.name,
+      phone: req.body.phone,
+      email: req.body.email,
+      cost: req.body.cost
+    }).then(function(result) {
+      console.log("done");
+        // return(result);
+      });;;
+});
+
+//=======================================================================================================================================================================
+//BRIDAL SHOP ROUTES
+//=======================================================================================================================================================================
+
+app.get('/api/bridalshops/', function(req, res) {
+  bridalShop.all(function(result) {
+    res.json(result);
   });
+});
 
 
-//post route
-  app.post(`/api/venues`, function(req, res){
-    // console.log(`LOOK HERE===============`);
-    // console.log(req.body);
-    // console.log(`========================`);
-      db.venue.create({
-        name: req.body.name,
-        address: req.body.address,
-        location: req.body.location,
-        capacity: req.body.capacity,
-        phone: req.body.phone,
-        cost: req.body.cost
-      }).then(function(result) {
-        console.log("done");
-          // return(result);
-        });;
+//tie a bridalShop to a user
+app.post(`/api/chosenBridalShops/`, function(req, res){ap
+  chosenBridalShop.add(req.body.accountID, req.body.flowerID, function(result) {
+    console.log(result);
+  })
+})
+
+//get all of the users chosen bridalShops
+app.get('/api/chosenBridalShops/', function(req, res) {
+  if(req.session.username){
+    chosenBridalShop.all(req.query.accountID, (function(result) {
+      res.json(result);
+    }));
+  }
+  else {
+    console.log(`There is no one logged in right now`);
+  }
+});
+
+
+app.post(`/api/bridalshops`, function(req, res){
+   db.bridal_shop.create({
+      name: req.body.name,
+      address: req.body.address,
+      phone: req.body.phone,
+      email: req.body.email,
+      cost: req.body.cost
+    }).then(function(result) {
+      console.log("done");
+        // return(result);
+      });;;
+});
+
+
+
+
+//=======================================================================================================================================================================
+//MUSIC ROUTES
+//=======================================================================================================================================================================
+
+app.get('/api/music/', function(req, res) {
+  music.all(function(result) {
+    res.json(result);
   });
+});
 
-  app.post(`/api/bridalshops`, function(req, res){
-     db.bridal_shop.create({
-        name: req.body.name,
-        address: req.body.address,
-        phone: req.body.phone,
-        email: req.body.email,
-        cost: req.body.cost
-      }).then(function(result) {
-        console.log("done");
-          // return(result);
-        });;;
-  });
+//tie a flower to a user
+app.post(`/api/chosenMusic/`, function(req, res){
+  chosenMusic.add(req.body.accountID, req.body.flowerID, function(result) {
+    console.log(result);
+  })
+})
+
+//get all of the users chosen flowers
+app.get('/api/chosenMusic/', function(req, res) {
+  if(req.session.username){
+    chosenMusic.all(req.query.accountID, (function(result) {
+      res.json(result);
+    }));
+  }
+  else {
+    console.log(`There is no one logged in right now`);
+  }
+});
+
 
   app.post(`/api/music`, function(req, res){
       db.music.create({
@@ -132,84 +188,5 @@ module.exports = function(app) {
         });;;
   });
 
-  app.post(`/api/flowers`, function(req, res){
-
-     db.flowers.create({
-        name: req.body.name,
-        phone: req.body.phone,
-        email: req.body.email,
-        cost: req.body.cost
-      }).then(function(result) {
-        console.log("done");
-          // return(result);
-        });;;
-  });
-
-  //update
-  app.put(`/api/:venues`, function(req, res){
-      db.Venue.update({
-        name: venue.name,
-        address: venue.address,
-        location: venue.location,
-        capacity: venue.capacity,
-        phone: venue.phone,
-        cost: venue.cost
-      }, {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(result) {
-        res.json(result);
-      });
-  });
-
-  app.put(`/api/:bridalshops`, function(req, res){
-      db.BridalShop.update({
-        name: bridalshop.name,
-        address: bridalshop.address,
-        phone: bridalshop.phone,
-        email: bridalshop.email,
-        cost: bridalshop.cost
-      }, {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(result) {
-        res.json(result);
-      });
-  });
-
-  app.put(`/api/:music`, function(req, res){
-      db.Music.update({
-        name: music.name,
-        phone: music.phone,
-        email: music.email,
-        cost: music.cost
-      }, {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(result) {
-        res.json(result);
-      });
-  });
-
-  app.put(`/api/:flowers`, function(req, res){
-      db.Flower.update({
-        name: flower.name,
-        phone: flower.phone,
-        email: flower.email,
-        cost: flower.cost
-      }, {
-        where:{
-        id: req.body.id
-        }
-      })
-      .then(function(result) {
-        res.json(result);
-      });
-  });
+//=======================================================================================================================================================================
 };

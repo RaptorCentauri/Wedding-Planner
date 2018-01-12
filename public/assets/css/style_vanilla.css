@@ -47,7 +47,12 @@
 }
 
 #submit-btn {
-  opacity: 100%;
+  margin-left: 10px;
+}
+
+p.a {
+  font-size: 20px;
+  font-style: bold;
 }
 
 .venue-card {
