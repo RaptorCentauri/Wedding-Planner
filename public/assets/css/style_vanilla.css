@@ -22,6 +22,19 @@
   font-family: 'League Script', cursive;
 }
 
+#form-logo {
+  text-align: center;
+  font-weight: 300;
+  font-family: 'League Script', cursive;
+}
+
+#user-form {
+  position: sticky;
+  height: 300px;
+  background-color: #FFFFF0;
+  opacity: 0.5;
+}
+
 /*.card {
   width: 400px;
   height: 400px;
