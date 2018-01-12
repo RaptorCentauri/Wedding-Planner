@@ -3,45 +3,57 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Wedding Planner</title>
+  <title>Bells and Vows Wedding Planner App</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|League+Script" rel="stylesheet">
 <!--   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
   <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="assets/css/style_vanilla.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
-<div class="navbar-fixed ">
-  <nav class="nav-bg z-depth-3" role="navigation">
-      <ul class="text-center">
-        <li ><a href="#" class="grey-text text-darken-4" id="venue-id">Venue</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Flowers</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Music</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Bridal Shops</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">DIY</a></li>
-      </ul>
-  </nav>
-</div>
-
-<!-- <nav>
-  <div class="nav-bg z-depth-3" role="navigation">
-    <h5 class="brand-logo">The Wedding Coders</h5>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li ><a href="#" class="grey-text text-darken-4" id="venue-id">Venue</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Flowers</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Music</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">Bridal Shops</a></li>
-        <li ><a href="#" class="grey-text text-darken-4">DIY</a></li>
-      </ul>    
+  <!-- NAV -->
+  <div class="navbar-fixed">
+    <nav class="nav-bg z-depth-3" role="navigation">
+      <h5 class="brand-logo blue-grey-text text-darken-1" id="logo"> bells & vows</h5>
+        <ul class="text-center alice-blue">
+        <ul class="text-center">
+          <li ><a href="#" class="grey-text text-darken-4" id="venue-id">Venue</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="flowers-id">Flowers</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="music-id">Music</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="bridal-id">Bridal Shops</a></li>
+          <li ><a href="#" class="grey-text text-darken-4" id="diy-id">DIY</a></li>
+        </ul>
+    </nav>
   </div>
-</nav> -->
 
-  <div class="main-img col s12 valign-wrapper">
+  <!-- BACKGROUND IMG and FORM-->
+  <div class="main-img col s12 valign-wrapper responsive-img">
     <div class="container">
-      <div class="section ">
-        <div class="row ">
+      <div class="section">
+        <div class="row">
+          <form class="col s6" id="user-form">
+            <h5 class="form-logo grey-text text-darken-4" id="form-logo"> welcome back!</h5>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>     
+<!--         <div class="row ">
 
           <div class="input-field col s5 opacity-style">
             <input id="email" type="email" class="validate">
@@ -56,63 +68,91 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+<br>
 
+<!-- CARDS Image Info Cards Section-->
 
-  <div class="container">
-    <div class="section">
-
-      <!--   Image Info Cards Section   -->
-      <div class="infoRow">
-
-        <!-- <div class="col s6 m4">
-          <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <span class="card-title venue-name">Venue Placeholder</span>
-              <p class="title venue-address">Location</p>
-              <p class="title venue-phone">Phone</p>
-              <p class="title venue-cap">Capacity</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Add to Planner</a>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div class="col s6 m4">
-          <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <span class="card-title venue-name">Venue Placeholder</span>
-              <p class="title venue-address">Location</p>
-              <p class="title venue-phone">Phone</p>
-              <p class="title venue-cap">Capicity</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Add to Planner</a>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div class="col s6 m4">
-          <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <span class="card-title venue-name">Venue Placeholder</span>
-              <p class="title venue-address">Location</p>
-              <p class="title venue-phone">Phone</p>
-              <p class="title venue-cap">Capicity</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Add to Planner</a>
-            </div>
-          </div>
-        </div> -->
-      <!-- end row -->
+  <!-- VENUE CARD-->
+<div class="container">
+  <div class="section">
+    <div class="infoRow row">
+      <div class="col s12 m8">
+      <div class="card alice-blue">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="venue-card">
+        </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Venues<i class="material-icons right">more_vert</i></span>
+          <p><a href="#" id="venue-link">See All Venues</a></p>
       </div>
+      <div class="card-reveal alice-blue">
+        <span class="card-title grey-text text-darken-4">Helpful Tips<i class="material-icons right">close</i></span>
+          <p>Important factors in choosing your perfect wedding venue</p>
+      </div>
+    </div>
+    </div>
+        
+  <!-- FLOWER CARD-->
+  <div class="col s12 m4">
+    <div class="card alice-blue">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="flowers-card">
+      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Flowers<i class="material-icons right">more_vert</i></span>
+        <p><a href="#" id="flower-link">See All Floral</a></p>
+    </div>
+    <div class="card-reveal alice-blue">
+      <span class="card-title grey-text text-darken-4">Helpful Tips<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+</div>
+        
+  <!-- MUSIC CARD-->
+  <div class="col s12 m4">
+    <div class="card alice-blue">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="music-card">
+      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Music<i class="material-icons right">more_vert</i></span>
+        <p><a href="#" id="music-link">See All Music</a></p>
+    </div>
+    <div class="card-reveal alice-blue">
+      <span class="card-title grey-text text-darken-4">Helpful Tips<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+    </div>
+  </div>
+   <!-- end row -->
+    </div>
+
+  <!-- BRIDAL CARD-->
+  <div class="infoRow row">
+  <div class="col s12 m12">
+    <div class="card alice-blue">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="bridal-card">
+      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Bridal Shops<i class="material-icons right">more_vert</i></span>
+        <p><a href="#" id="bridal-link">See All Shops</a></p>
+    </div>
+    <div class="card-reveal alice-blue">
+      <span class="card-title grey-text text-darken-4">Helpful Tips<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+    </div>
+  </div>
+  </div>
    <!--  end section -->
     </div>
  <!--  end container -->
   </div>
 
+  <!-- PLANNER -->
   <div class="container">
     <div class="row">
       <div class="col s12">
@@ -146,34 +186,33 @@
       </div>
     </div>
   </div>
-
-  <footer class="page-footer alice-blue darken-1">
+  
+  <!-- FOOTER-->
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="grey-text text-darken-3">About Us</h5>
-          <p class="grey-text text-darken-3">We are a team of Full Stack Web Development Program Students working at hard on this app. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="grey-text text-darken-3" id="about-header">About Us</h5>
+          <p class="grey-text text-darken-3" id="about-section">We are a team of Full Stack Web Development Program Students working at hard on this app. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
         </div>
         <div class="col l6 s12">
-          <h5 class="grey-text text-darken-3">Connect</h5>
-          <ul>
-            <li><a class="alice-blue-text medium-2">Nicole Cloyd, Database Administrator</a></li>
-            <li><a class="alice-blue-text medium-2">Yaeinn Park, UX, Project Manager</a></li>
-            <li><a class="alice-blue-text medium-2">Dave Leo Shilander, Back End Developer</a></li>
-            <li><a class="alice-blue-text medium-2">Melissa St Moore, Front End Developer</a></li>
+          <h5 class="grey-text text-darken-3" id="connect-header">Connect</h5>
+          <ul id="connect-section">
+            <li><a class="grey-text text-darken-3">Nicole Cloyd, Database Administrator</a></li>
+            <li><a class="grey-text text-darken-3">Yaeinn Park, UI/UX, Project Manager</a></li>
+            <li><a class="grey-text text-darken-3">Dave Leo Shilander, Back End Developer</a></li>
+            <li><a class="grey-text text-darken-3">Melissa St Moore, Front End Developer</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright grey-text">
+    <div class="footer-copyright blue-grey darken-1 white-text">
       <div class="container">
-      Made by <a class="alice-blue-text medium-2 text-lighten-3" href="http://materializecss.com">The Wedding Coders</a>
+      Copyright 2018 | <a class="alice-blue-text medium-2 text-lighten-3" href="http://materializecss.com">The Wedding Coders</a>
       </div>
     </div>
-
   </footer>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

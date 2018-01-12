@@ -1,4 +1,7 @@
 /* Custom Styles not Using Sass Compiler*/
+ body {
+  background-color: #FFFFF0;
+}
 
 .main-img, .responsive-img {
   background-image: url(../images/peony2.jpg);
@@ -7,20 +10,94 @@
   min-height: 415px;
 }
 
-.nav-bg, body {
+.nav-bg {
+  background-color: aliceblue;
+}
+
+#logo {
+  /*position: relative;*/
+  text-align: left;
+  margin: 20px 0px 0px 20px;
+  font-weight: 300;
+  font-family: 'League Script', cursive;
+}
+
+#form-logo {
+  text-align: center;
+  font-weight: 300;
+  font-family: 'League Script', cursive;
+}
+
+#user-form {
+  position: sticky;
+  height: 300px;
   background-color: #FFFFF0;
+  opacity: 0.5;
+}
+
+/*.card {
+  width: 400px;
+  height: 400px;
+}*/
+
+/*.card-content {
+  height: 250px;
+
+}*/
+
+.venue-card {
+  background-image: url(../images/venue1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 532px;
+  /*width: 400px;*/
+}
+
+.flowers-card {
+  background-image: url(../images/flower-card.jpg);
+  background-position: center;
+  height: 200px;
+  /*width: 250px;*/
+}
+
+.music-card {
+  background-image: url(../images/music1.jpg);
+  background-position: center;
+  height: 200px;
+  /*width: 250px;*/
+}
+
+.bridal-card {
+  background-image: url(../images/dress3.jpg);
+  background-position: center;
+  height: 250px;
+/*  width: 250px;*/
 }
 
 .opacity-style {
   background-color: aliceblue;
   opacity: .6;
-
 }
 
-/*.brand-logo {
-	margin-left: 10px;	
+.page-footer {
+	background-image: url(../images/banner.png);
+/*  background-repeat: no-repeat;*/
+  float: left;
+  width: 100%;
+  background-size: 115%;
 }
 
-#nav-mobile {
-	
+/*#footer-img {
+  opacity: 0.5;
 }*/
+
+#about-header, #about-section, #connect-header, #connect-section {
+  text-align: right;
+}
+
+/*.footer-copyright {
+	background-color: grey;
+}*/
+
+
+
