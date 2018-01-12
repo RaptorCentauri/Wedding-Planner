@@ -8,6 +8,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 415px;
+  opacity: 1.0;
+}
+
+#img-text {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  /*background-color: aliceblue;*/
 }
 
 .nav-bg {
@@ -29,11 +38,16 @@
 }
 
 #user-form {
-  padding: 20px; 
-  position: sticky;
-  height: 300px;
+  margin-left: 25%;
+  padding: 20px;
+  height: 325px;
   background-color: #FFFFF0;
-  opacity: 0.7;
+  color: black;
+  opacity: 0.9;
+}
+
+#submit-btn {
+  opacity: 100%;
 }
 
 .venue-card {
