@@ -134,7 +134,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
   // this is the venue button
   $(".venue-class").on("click", function(event){
-    $(".infoRow").empty();
+    $(".resultsRow").empty();
         event.preventDefault();
 
       $.get( "/api/venues", function(data){
@@ -148,7 +148,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
           var venCost = data[i].cost;
           console.log(venName);
 
-          $(".infoRow").append(
+          $(".resultsRow").append(
             `<div class="col s6 m6 l4">
             <div class="card alice-blue">
               <div class="card-content grey-text text-darken-3">
@@ -172,7 +172,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
   // this is the flowers button
   $(".flowers-class").on("click", function(event){
-    $(".infoRow").empty();
+    $(".resultsRow").empty();
         event.preventDefault();
 
       $.get( "/api/flowers", function(data){
@@ -185,7 +185,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
           var floCost = data[i].cost;
           // console.log(floName);
 
-        $(".infoRow").append(
+        $(".resultsRow").append(
           `<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
@@ -209,7 +209,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
 // this is the music button
 $(".music-class").on("click", function(event){
-   $(".infoRow").empty();
+   $(".resultsRow").empty();
        event.preventDefault();
 
     $.get( "/api/musics", function(data){
@@ -222,7 +222,7 @@ $(".music-class").on("click", function(event){
           var musCost = data[i].cost;
           // console.log(musName);
 
-        $(".infoRow").append(
+        $(".resultsRow").append(
           `<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
@@ -245,7 +245,7 @@ $(".music-class").on("click", function(event){
 
 // this is the bridal button
 $(".bridal-class").on("click", function(event) {
-  $(".infoRow").empty();
+  $(".resultsRow").empty();
       event.preventDefault();
 
       $.get("/api/bridalshops", function(data){
@@ -259,7 +259,7 @@ $(".bridal-class").on("click", function(event) {
           var briCost = data[i].cost;
           // console.log(briName);
 
-          $(".infoRow").append(
+          $(".resultsRow").append(
              `<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
