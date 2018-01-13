@@ -155,7 +155,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
                 <p class="title venue-name">${venName}</span>
                 <p class="title venue-address">${venAdd}</p>
                 <p class="title venue-phone">${venPhone}</p>
-                <p class="title venue-cap">Capactiy: ${venCap} People</p>
+                <p class="title venue-cap">${venCap} Person Capacity</p>
               </div>
               <div class="card-action">
                 <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
