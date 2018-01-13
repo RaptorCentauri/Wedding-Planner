@@ -106,4 +106,6 @@ p.a {
   text-align: right;
 }
 
-
+p.title.bridal-name {
+  font-weight: bold;
+}
