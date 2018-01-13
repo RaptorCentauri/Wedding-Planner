@@ -195,7 +195,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
               <p class="title flowers-cost">$${floCost}</p>
             </div>
             <div class="card-action">
-              <button class="addFlowersPlanner" data-id="${i}">Add to Planner</button>
+
               <a class="addFlowersPlanner" data-id="${i}" href="#">Add to Planner</a>
             </div>
           </div>
@@ -232,7 +232,7 @@ $(".music-class").on("click", function(event){
               <p class="title music-cost">$${musCost}</p>
             </div>
             <div class="card-action">
-              <button class="addMusicPlanner" data-id="${i}">Add to Planner</button>
+
               <a class="addMusicPlanner" data-id="${i}" href="#">Add to Planner</a>
             </div>
           </div>
@@ -270,7 +270,7 @@ $(".bridal-class").on("click", function(event) {
               <p class="title bridal-cost">$${briCost}</p>
             </div>
             <div class="card-action">
-              <button class="addBridalPlanner" data-id="${i}">Add to Planner</button>
+
               <a class="addBridalPlanner" data-id="${i}" href="#">Add to Planner</a>
             </div>
           </div>
