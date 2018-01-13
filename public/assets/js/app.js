@@ -25,7 +25,7 @@ $(document).ready(function(){
           var venCost = data[i].cost;
           console.log(venName);
 
-          $(".infoRow").append(
+          $(".infoRow").html(
             `<div class="col s6 m6 l4">
             <div class="card alice-blue">
               <div class="card-content grey-text text-darken-3">
@@ -80,7 +80,7 @@ $(document).ready(function(){
         );
 
         }
-      });
+      }, "json");
   })
 
 
