@@ -1,8 +1,8 @@
-INSERT INTO bridal_shop (name, address, phone, email, cost) VALUES ("Lovely Bride","3529 Sarah Lane","3125559054","appointment@lovelybride.com", 750);
-INSERT INTO bridal_shop (name, address, phone, email, cost) VALUES ("Gigi's Couture","10 Michigan Avenue","8475556743","sarah@gigiscouture.com", 5000);
-INSERT INTO bridal_shop (name, address, phone, email, cost) VALUES ("Bella Bridal","2500 W Roosevelt Boulevard","3125559438","book@bellabridal.com", 10000);
-INSERT INTO bridal_shop (name, address, phone, email, cost) VALUES ("La Petite Boutique","34 W Maple Street","3125556723","schedule@boutique.com", 750000);
-INSERT INTO bridal_shop (name, address, phone, email, cost) VALUES ("Lily Ann's Closet","319 S Le Claire Avenue","8475554285","lilyann@gmail.com", 2500);
+INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Lovely Bride","3529 Sarah Lane","3125559054","appointment@lovelybride.com", 750);
+INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Gigi's Couture","10 Michigan Avenue","8475556743","sarah@gigiscouture.com", 5000);
+INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Bella Bridal","2500 W Roosevelt Boulevard","3125559438","book@bellabridal.com", 10000);
+INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("La Petite Boutique","34 W Maple Street","3125556723","schedule@boutique.com", 750000);
+INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Lily Ann's Closet","319 S Le Claire Avenue","8475554285","lilyann@gmail.com", 2500);
 
 INSERT INTO flowers (name, phone, email, cost) VALUES ("Bloom","8475558442","nicole@bloom.com", 1200);
 INSERT INTO flowers (name, phone, email, cost) VALUES ("Fleur de l'Amour","3125551550","order@fleur.com", 2500);

@@ -267,7 +267,7 @@ $("#bridal-id").on("click", function(event) {
               <p class="title bridal-address">${briAdd}</p>
               <p class="title bridal-phone">${briPhone}</p>
               <p class="title bridal-email">${briEmail}</p>
-              <p class="title bridal-cost">${briCost}</p>
+              <p class="title bridal-cost">"$"+${briCost}</p>
             </div>
             <div class="card-action">
               <button class="addBridalPlanner" data-id="${i}">Add to Planner</button>
