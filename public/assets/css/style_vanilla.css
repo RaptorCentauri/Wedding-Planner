@@ -106,6 +106,6 @@ p.a {
   text-align: right;
 }
 
-p.title.bridal-name {
+p.title.bridal-name, p.title.venue-name, p.title.flowers-name, p.title.music.name {
   font-weight: bold;
 }
