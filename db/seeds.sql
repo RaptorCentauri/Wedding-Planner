@@ -14,12 +14,12 @@ INSERT INTO flowers (name, phone, email, cost) VALUES ("Yaeinn's Flower Shop","8
 INSERT INTO flowers (name, phone, email, cost) VALUES ("Flora","312-555-6421","flora@comcast.net", 8000);
 INSERT INTO flowers (name, phone, email, cost) VALUES ("Stems","312-555-6776","order@stems.com", 3200);
 
-INSERT INTO music (name, phone, email, cost) VALUES ("Melissa and the Wedding Singers","312-555-3889","melissa23@gmail.com",2000);
-INSERT INTO music (name, phone, email, cost) VALUES ("Five Strings Orchestra","312-555-4577","fivestrings@comcast.net", 1500);
-INSERT INTO music (name, phone, email, cost) VALUES ("Shilander & Smith Band","847-555-2330","dave@gmail.com", 1000);
-INSERT INTO music (name, phone, email, cost) VALUES ("The Reception Crashers","312-555-2332","reserve@receptioncrashers.net", 1250);
-INSERT INTO music (name, phone, email, cost) VALUES ("Groove Machine","847-555-0921","book@groovemachine.com",900);
-INSERT INTO music (name, phone, email, cost) VALUES ("Wedding Banned","312-555-3333","book@groovemachine.com",700);
+INSERT INTO musics (name, phone, email, cost) VALUES ("Melissa and the Wedding Singers","312-555-3889","melissa23@gmail.com",2000);
+INSERT INTO musics (name, phone, email, cost) VALUES ("Five Strings Orchestra","312-555-4577","fivestrings@comcast.net", 1500);
+INSERT INTO musics (name, phone, email, cost) VALUES ("Shilander & Smith Band","847-555-2330","dave@gmail.com", 1000);
+INSERT INTO musics (name, phone, email, cost) VALUES ("The Reception Crashers","312-555-2332","reserve@receptioncrashers.net", 1250);
+INSERT INTO musics (name, phone, email, cost) VALUES ("Groove Machine","847-555-0921","book@groovemachine.com",900);
+INSERT INTO musics (name, phone, email, cost) VALUES ("Wedding Banned","312-555-3333","book@groovemachine.com",700);
 
 INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Kearny Supper Club","7242 N Main St","outdoor", 60,"818-555-09878", 1300);
 INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("The Werbowsky Lounge","35000 Sam Adams Terrace","indoor", 250,"773-555-6486", 4000);

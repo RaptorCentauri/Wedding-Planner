@@ -8,7 +8,7 @@ let chosenMusic = {
   },
 
   all: function(value, cb){
-    orm.selectSpecific("chosenMusic", "music", "musicID", "id", "accountID", value, function(res) {
+    orm.selectSpecific("chosenMusic", "musics", "musicID", "id", "accountID", value, function(res) {
       cb(res);
     })
   },

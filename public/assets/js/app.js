@@ -133,7 +133,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
 
   // this is the venue button
-  $("#venue-id").on("click", function(event){
+  $(".venue-class").on("click", function(event){
     $(".infoRow").empty();
         event.preventDefault();
 
@@ -212,7 +212,7 @@ $("#music-id").on("click", function(event){
    $(".infoRow").empty();
        event.preventDefault();
 
-    $.get( "/api/music", function(data){
+    $.get( "/api/musics", function(data){
       console.log("DATA: ", data);
       console.log("this is a get request");
       for(var i = 0; i < data.length; i ++){

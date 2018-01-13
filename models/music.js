@@ -1,7 +1,7 @@
 const orm = require('../config/orm.js');
 let music = {
   all: function(cb){
-    orm.selectAll("music", function(res) {
+    orm.selectAll("musics", function(res) {
       cb(res);
     })
   },

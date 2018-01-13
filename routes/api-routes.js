@@ -150,7 +150,7 @@ app.post(`/api/bridalshops`, function(req, res){
 //MUSIC ROUTES
 //=======================================================================================================================================================================
 
-app.get('/api/music/', function(req, res) {
+app.get('/api/musics/', function(req, res) {
   music.all(function(result) {
     res.json(result);
   });
@@ -176,8 +176,8 @@ app.get('/api/chosenMusic/', function(req, res) {
 });
 
 
-  app.post(`/api/music`, function(req, res){
-      db.music.create({
+  app.post(`/api/musics`, function(req, res){
+      db.musics.create({
         name: req.body.name,
         phone: req.body.phone,
         email: req.body.email,
