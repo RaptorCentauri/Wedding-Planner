@@ -133,7 +133,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
 
   // this is the venue button
-  $("#venue-id").on("click", function(event){
+  $("#venue-id", "a#venue-link").on("click", function(event){
     $(".infoRow").empty();
         event.preventDefault();
 
@@ -171,7 +171,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
   })
 
   // this is the flowers button
-  $("#flowers-id").on("click", function(event){
+  $("#flowers-id", "a#flower-link").on("click", function(event){
     $(".infoRow").empty();
         event.preventDefault();
 
@@ -208,7 +208,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
 
 // this is the music button
-$("#music-id").on("click", function(event){
+$("#music-id", "a#music-link").on("click", function(event){
    $(".infoRow").empty();
        event.preventDefault();
 
@@ -244,7 +244,7 @@ $("#music-id").on("click", function(event){
   })
 
 // this is the bridal button
-$("#bridal-id").on("click", function(event) {
+$("#bridal-id", "a#bridal-link").on("click", function(event) {
   $(".infoRow").empty();
       event.preventDefault();
 
