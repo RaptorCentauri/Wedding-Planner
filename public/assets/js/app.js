@@ -103,7 +103,6 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
 
     event.preventDefault();
 
-console.log("login button clicked");
 
     let loginAuth = {
       username: $("#email").val(),
@@ -139,8 +138,7 @@ console.log("login button clicked");
         event.preventDefault();
 
       $.get( "/api/venues", function(data){
-        console.log("DATA: ", data);
-        console.log("this is a get request");
+
         for(var i = 0; i < data.length; i ++){
           var venName = data[i].name;
           var venAdd = data[i].address;
