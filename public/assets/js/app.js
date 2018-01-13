@@ -155,7 +155,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
                 <p class="title venue-name">${venName}</span>
                 <p class="title venue-address">${venAdd}</p>
                 <p class="title venue-phone">${venPhone}</p>
-                <p class="title venue-cap">${venCap}</p>
+                <p class="title venue-cap">${venCap} Capacity</p>
               </div>
               <div class="card-action">
                 <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
@@ -192,7 +192,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
               <p class="title flowers-name">${floName}</span>
               <p class="title flowers-phone">${floPhone}</p>
               <p class="title flowers-email">${floEmail}</p>
-              <p class="title flowers-cost">${floCost}</p>
+              <p class="title flowers-cost">$${floCost}</p>
             </div>
             <div class="card-action">
               <button class="addFlowersPlanner" data-id="${i}">Add to Planner</button>
@@ -229,7 +229,7 @@ $("#music-id").on("click", function(event){
               <p class="title music-name">${musName}</span>
               <p class="title music-phone">${musPhone}</p>
               <p class="title music-email">${musEmail}</p>
-              <p class="title music-cost">${musCost}</p>
+              <p class="title music-cost">$${musCost}</p>
             </div>
             <div class="card-action">
               <button class="addMusicPlanner" data-id="${i}">Add to Planner</button>
