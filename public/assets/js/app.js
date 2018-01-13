@@ -25,7 +25,7 @@ $(document).ready(function(){
           var venCost = data[i].cost;
           console.log(venName);
 
-          $(".infoRow").html(
+          $(".infoRow").append(
             `<div class="col s6 m6 l4">
             <div class="card alice-blue">
               <div class="card-content grey-text text-darken-3">
