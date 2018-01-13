@@ -60,14 +60,11 @@ $(document.body).on("click", ".addVenuePlanner", function(){
   console.log(this);
   // console.log(blah);
 
-
-
-
-
 })
 
 
  $('.collapsible').collapsible();
+ $(".button-collapse").sideNav();
 
 
 // function recipeReturn(ID) {
