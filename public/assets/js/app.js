@@ -60,7 +60,7 @@ $(document).ready(function(){
           var floPhone = data[i].phone;
           var floEmail = data[i].email;
           var floCost = data[i].cost;
-          console.log(floName);
+          // console.log(floName);
 
         $(".infoRow").append(
           `<div class="col s6 m6 l4">
@@ -80,7 +80,7 @@ $(document).ready(function(){
         );
 
         }
-      }, "json");
+      });
   })
 
 
@@ -97,7 +97,7 @@ $("#music-id").on("click", function(event){
           var musPhone = data[i].phone;
           var musEmail = data[i].email;
           var musCost = data[i].cost;
-          console.log(musName);
+          // console.log(musName);
 
         $(".infoRow").append(
           `<div class="col s6 m6 l4">
@@ -134,7 +134,7 @@ $("#bridal-id").on("click", function(event) {
           var briPhone = data[i].phone;
           var briEmail = data[i].email;
           var briCost = data[i].cost;
-          console.log(briName);
+          // console.log(briName);
 
           $(".infoRow").append(
              `<div class="col s6 m6 l4">
