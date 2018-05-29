@@ -1,29 +1,29 @@
 USE wedding_planner_db;
 
-INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Lovely Bride","3529 Sarah Lane","312-555-9054","appointment@lovelybride.com", 1250);
-INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Gigi's Couture","10 Michigan Avenue","847-555-6743","sarah@gigiscouture.com", 5000);
-INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Bella Bridal","2500 W Roosevelt Boulevard","312-555-9438","book@bellabridal.com", 10000);
-INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("La Petite Boutique","34 W Maple Street","312-555-6723","schedule@boutique.com", 750000);
-INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Lily Ann's Closet","319 S Le Claire Avenue","847-555-4285","lilyann@gmail.com", 700);
-INSERT INTO bridal_shops (name, address, phone, email, cost) VALUES ("Vivian's Bridal Boutqiue","5460 N Vera Lane","847-555-3100","book@viviansbridal.com", 2500);
+INSERT INTO bridal_shops (name, address, phone, email, website) VALUES ("Alice in Ivory","1117 W Armitage Ave","312-533-9326","hello@aliceinivory.com","www.aliceinivory.com/");
+INSERT INTO bridal_shops (name, address, phone, email, website) VALUES ("Lovely Bride","1657 N Wells St","312-285-2990","chicago@lovelybride.com","www.lovelybride.com/");
+INSERT INTO bridal_shops (name, address, phone, email, website) VALUES ("Jenny Yoo Collection","311 W Superior St","312-642-2327","info@jennyyoo.com","www.jennyyoo.com/");
+INSERT INTO bridal_shops (name, address, phone, email, website) VALUES ("Mira Couture","1 E Delaware Pl","312-255-1699","MiraCouture@gmail.com","www.miracouture.com/");
+INSERT INTO bridal_shops (name, address, phone, email, website) VALUES ("BHLDN","8 E Walton St","312-573-2573","support@BHLDN.com","www.bhldn.com");
+INSERT INTO bridal_shops (name, address, phone, email, website) VALUES ("Mignonette Bridal","53 W Jackson Blvd suite 956","773-413-0508","mignonettestore@gmail.com","www.mignonettebridal.com");
 
-INSERT INTO flowers (name, phone, email, cost) VALUES ("Bloom","847-555-8442","nicole@bloom.com", 1200);
-INSERT INTO flowers (name, phone, email, cost) VALUES ("Fleur de l'Amour","312-555-1550","order@fleur.com", 2500);
-INSERT INTO flowers (name, phone, email, cost) VALUES ("Bunches & Bows","312-555-2400","dave@bunches.com", 800);
-INSERT INTO flowers (name, phone, email, cost) VALUES ("Yaeinn's Flower Shop","847-555-8965","order@yaeinnsflowershop.com", 1500);
-INSERT INTO flowers (name, phone, email, cost) VALUES ("Flora","312-555-6421","flora@comcast.net", 8000);
-INSERT INTO flowers (name, phone, email, cost) VALUES ("Stems","312-555-6776","order@stems.com", 3200);
+INSERT INTO flowers (name, phone, email, website) VALUES ("Pollen","773-278-6606","lynn@pollenfloraldesign.com","www.pollenfloraldesign.com/");
+INSERT INTO flowers (name, phone, email, website) VALUES ("Dilly Lily","773-404-0602","shop@dillylily.com","www.dillylily.com");
+INSERT INTO flowers (name, phone, email, website) VALUES ("Stems","312-243-4470","info@stemschicago.com","www.stemschicago.com/");
+INSERT INTO flowers (name, phone, email, website) VALUES ("Bunches","773-975-2444","buncheschicago@gmail.com","www.buncheschicago.com/");
+INSERT INTO flowers (name, phone, email, website) VALUES ("Flora","773-929-2835","info@florachicago.com","www.florachicago.com/");
+INSERT INTO flowers (name, phone, email, website) VALUES ("Gratitude-Heart-Garden Florist","773-477-7475","bloom-orders@gratitudeheartgarden.com","www.gratitudeheartgarden.com/");
 
-INSERT INTO musics (name, phone, email, cost) VALUES ("Melissa and the Wedding Singers","312-555-3889","melissa23@gmail.com",2000);
-INSERT INTO musics (name, phone, email, cost) VALUES ("Five Strings Orchestra","312-555-4577","fivestrings@comcast.net", 1500);
-INSERT INTO musics (name, phone, email, cost) VALUES ("Shilander & Smith Band","847-555-2330","dave@gmail.com", 1000);
-INSERT INTO musics (name, phone, email, cost) VALUES ("The Reception Crashers","312-555-2332","reserve@receptioncrashers.net", 1250);
-INSERT INTO musics (name, phone, email, cost) VALUES ("Groove Machine","847-555-0921","book@groovemachine.com",900);
-INSERT INTO musics (name, phone, email, cost) VALUES ("Wedding Banned","312-555-3333","book@groovemachine.com",700);
+INSERT INTO musics (name, phone, email, website) VALUES ("Symphony Sounds","312-371-4271","contact@symphonysounds.us","www.symphonysounds.us/");
+INSERT INTO musics (name, phone, email, website) VALUES ("David Rothstein Music","773-719-7610","david@drsmusic.com","www.drsmusic.com/");
+INSERT INTO musics (name, phone, email, website) VALUES ("Rendezvous Music","847-673-5383", "contact@rendezvousmusic.net","www.rendezvousmusic.net");
+INSERT INTO musics (name, phone, email, website) VALUES ("UpBeat Music Productions","773-593-2431","michael@upbeatmusicproductions.com","www.upbeatmusicproductions.com/");
+INSERT INTO musics (name, phone, email, website) VALUES ("Bopology Chicago Swing Wedding Band","773-317-6941","steve@bopology.com","www.bopologychicago.com/");
+INSERT INTO musics (name, phone, email, website) VALUES ("Matt Stedman Band & Ring Of Music Orchestra","630-670-0316","info@ringofmusic.com","ringofmusic.com/");
 
-INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Kearny Supper Club","7242 N Main St","outdoor", 60,"818-555-09878", 1300);
-INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("The Werbowsky Lounge","35000 Sam Adams Terrace","indoor", 250,"773-555-6486", 4000);
-INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("The Penthouse at The Herman ","5 E Infinity Place 85th Floor","both", 500,"630-555-1509", 25000);
-INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Storino's","1676 N Lincoln","indoor", 200,"773-555-9078", 8500);
-INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("Karl Thomas' Distillery and Lodge","4242 E Barrel Junction","indoor", 150 ,"847-555-7424", 12000);
-INSERT INTO venues (name, address, location, capacity, phone, cost) VALUES ("The Einsenberger","450 N Linden St","indoor", 80 ,"630-555-3220", 6500);
+INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Stratford on the Park","2300 Lincoln Park W","Indoor", 60,"773-472-5959","www.stratfordonthepark.com/");
+INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Greenhouse Loft","2545 W Diversey Ave","Indoor/Outdoor", 250,"312-733-5762","www.greenhouseloftweddings.com/");
+INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("The Crown","435 N Michigan Ave","Indoor", 500,"312-262-5310", "www.thecrownchicago.com/");
+INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Keith House","1900 S Prairie Ave","Outdoor", 200,"312-907-7909", "www.keithhousechicago.com/");
+INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Loft on Lake","1366 W Lake St, Chicago","Indoor/Outdoor", 150 ,"312-561-4232", "www.loftonlake.com/");
+INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Ivy Room At Tree Studios","12 E Ohio St #100","Indoor/Outdoor", 80 ,"312-645-7760", "www.ivyroomchicago.com/");
