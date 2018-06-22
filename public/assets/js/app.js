@@ -142,33 +142,34 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
         for(var i = 0; i < data.length; i ++){
           var venName = data[i].name;
           var venAdd = data[i].address;
-          var venLoc = data[i].location;
-          var venCap = data[i].capacity;
           var venPhone = data[i].phone;
-          var venCost = data[i].cost;
+          var venSite = data[i].website;
           console.log(venName);
+          console.log(i);
 
           $(".resultsRow").append(
             `<div class="col s6 m6 l4">
-            <div class="card alice-blue">
-              <div class="card-content grey-text text-darken-3">
-                <p class="title venue-name">${venName}</span>
-                <p class="title venue-address">${venAdd}</p>
-                <p class="title venue-phone">${venPhone}</p>
-                <p class="title venue-cap">${venCap} Person Capacity</p>
+              <div class="card alice-blue">
+                <div class="card-content grey-text text-darken-3">
+                  <p class="title venue-name">${venName}</span>
+                    <p class="title venue-address">${venAdd}</p>
+                    <p class="title venue-phone">${venPhone}</p>
+                    <p class="title venue-site">${venSite}</p>
+                </div>
+                <div class="card-action">
+                  <a class="addVenuePlanner" data-id="${i}" href="#">Add to Planner</a>
+
+                </div>
               </div>
-              <div class="card-action">
-                <button class="addVenuePlanner" data-id="${i}">Add to Planner</button>
-                <a class="addVenuePlanner" data-id="${i}" href="#">Add to Planner</a>
-              </div>
-            </div>
-          </div>`
+            </div>`
           );
 
         }
-    }, "json");
 
-  })
+      }, "json");
+
+
+  });
 
   // this is the flowers button
   $(".flowers-class").on("click", function(event){
@@ -182,7 +183,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
           var floName = data[i].name;
           var floPhone = data[i].phone;
           var floEmail = data[i].email;
-          var floCost = data[i].cost;
+          var floSite = data[i].website;
           // console.log(floName);
 
         $(".resultsRow").append(
@@ -192,7 +193,7 @@ isLoggedIn(loggedIn, couple.groom, couple.bride);
               <p class="title flowers-name">${floName}</span>
               <p class="title flowers-phone">${floPhone}</p>
               <p class="title flowers-email">${floEmail}</p>
-              <p class="title flowers-cost">$${floCost}</p>
+              <p class="title flowers-site">${floSite}</p>
             </div>
             <div class="card-action">
 
@@ -219,7 +220,7 @@ $(".music-class").on("click", function(event){
           var musName = data[i].name;
           var musPhone = data[i].phone;
           var musEmail = data[i].email;
-          var musCost = data[i].cost;
+          var musSite = data[i].website;
           // console.log(musName);
 
         $(".resultsRow").append(
@@ -229,7 +230,7 @@ $(".music-class").on("click", function(event){
               <p class="title music-name">${musName}</span>
               <p class="title music-phone">${musPhone}</p>
               <p class="title music-email">${musEmail}</p>
-              <p class="title music-cost">$${musCost}</p>
+              <p class="title music-cost">${musSite}</p>
             </div>
             <div class="card-action">
 
@@ -256,43 +257,41 @@ $(".bridal-class").on("click", function(event) {
           var briAdd = data[i].address;
           var briPhone = data[i].phone;
           var briEmail = data[i].email;
-          var briCost = data[i].cost;
+          var briSite = data[i].website;
+  
           // console.log(briName);
 
           $(".resultsRow").append(
-             `<div class="col s6 m6 l4">
-          <div class="card alice-blue">
-            <div class="card-content grey-text text-darken-3">
-              <p class="title bridal-name">${briName}</span>
-              <p class="title bridal-address">${briAdd}</p>
-              <p class="title bridal-phone">${briPhone}</p>
-              <p class="title bridal-email">${briEmail}</p>
-              <p class="title bridal-cost">$${briCost}</p>
-            </div>
-            <div class="card-action">
+            `<div class="col s6 m6 l4">
+              <div class="card alice-blue">
+                <div class="card-content grey-text text-darken-3">
+                  <p class="title bridal-name">${briName}</span>
+                    <p class="title bridal-address">${briAdd}</p>
+                    <p class="title bridal-phone">${briPhone}</p>
+                    <p class="title bridal-email">${briEmail}</p>
+                    <p class="title bridal-cost">${briSite}</p>
+                </div>
+                <div class="card-action">
 
-              <a class="addBridalPlanner" data-id="${i}" href="#">Add to Planner</a>
-            </div>
-          </div>
-        </div>`
+                  <a class="addBridalPlanner" data-id="${i}" href="#">Add to Planner</a>
+                </div>
+              </div>
+            </div>`
             );
         }
       }, "json");
       })
 });
 
-
-$(document.body).on("click", ".addVenuePlanner", function(){
+$(document.body).on("click", ".addVenuePlanner", function () {
   console.log("click working");
 
-  // let blah = this.data("data-id");
-  $(".venuePlanner").html("test append");
 
-  console.log(this);
-  // console.log(blah);
 
+  console.log('This is in this: ', this, ' so this is working ');
+  // now how do we add the venue with the data-id="1" to the planner with jquery?
+  $(".venuePlanner").html(this);
 })
-
 
  $('.collapsible').collapsible();
  $(".button-collapse").sideNav();

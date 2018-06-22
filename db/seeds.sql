@@ -21,9 +21,10 @@ INSERT INTO musics (name, phone, email, website) VALUES ("UpBeat Music Productio
 INSERT INTO musics (name, phone, email, website) VALUES ("Bopology Chicago Swing Wedding Band","773-317-6941","steve@bopology.com","www.bopologychicago.com/");
 INSERT INTO musics (name, phone, email, website) VALUES ("Matt Stedman Band & Ring Of Music Orchestra","630-670-0316","info@ringofmusic.com","ringofmusic.com/");
 
-INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Stratford on the Park","2300 Lincoln Park W","Indoor", 60,"773-472-5959","www.stratfordonthepark.com/");
-INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Greenhouse Loft","2545 W Diversey Ave","Indoor/Outdoor", 250,"312-733-5762","www.greenhouseloftweddings.com/");
-INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("The Crown","435 N Michigan Ave","Indoor", 500,"312-262-5310", "www.thecrownchicago.com/");
-INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Keith House","1900 S Prairie Ave","Outdoor", 200,"312-907-7909", "www.keithhousechicago.com/");
-INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Loft on Lake","1366 W Lake St, Chicago","Indoor/Outdoor", 150 ,"312-561-4232", "www.loftonlake.com/");
-INSERT INTO venues (name, address, location, capacity, phone, website) VALUES ("Ivy Room At Tree Studios","12 E Ohio St #100","Indoor/Outdoor", 80 ,"312-645-7760", "www.ivyroomchicago.com/");
+INSERT INTO venues (name, address, phone, website) VALUES ("Stratford on the Park","2300 Lincoln Park W","773-472-5959","www.stratfordonthepark.com/");
+INSERT INTO venues (name, address, phone, website) VALUES ("Greenhouse Loft","2545 W Diversey Ave","312-733-5762","www.greenhouseloftweddings.com/");
+INSERT INTO venues (name, address, phone, website) VALUES ("The Crown","435 N Michigan Ave","312-262-5310","www.thecrownchicago.com/");
+INSERT INTO venues (name, address, phone, website) VALUES ("Keith House","1900 S Prairie Ave","312-907-7909","www.keithhousechicago.com/");
+INSERT INTO venues (name, address, phone, website) VALUES ("Loft on Lake","1366 W Lake St, Chicago","312-561-4232","www.loftonlake.com/");
+INSERT INTO venues (name, address, phone, website) VALUES ("Ivy Room At Tree Studios","12 E Ohio St","312-645-7760","www.ivyroomchicago.com/");
+

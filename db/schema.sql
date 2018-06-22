@@ -3,23 +3,12 @@ CREATE DATABASE wedding_planner_db;
 
 USE wedding_planner_db;
 
-CREATE TABLE venues (
+CREATE TABLE bridal_shops (
 id INT auto_increment NOT NULL,
 name VARCHAR(100) NOT NULL,
 address VARCHAR(100) NOT NULL,
-location VARCHAR(100) NOT NULL,
-capacity INT(50) NOT NULL,
-phone VARCHAR(15) NOT NULL,
-website VARCHAR(100) NOT NULL,
-primary key(id)
-);
-
-CREATE TABLE musics (
-id INT auto_increment NOT NULL,
-name VARCHAR(100) NOT NULL,
 phone VARCHAR(15) NOT NULL,
 email VARCHAR(100) NOT NULL,
-cost INT(100) NOT NULL,
 website VARCHAR(100) NOT NULL,
 primary key(id)
 );
@@ -33,12 +22,25 @@ website VARCHAR(100) NOT NULL,
 primary key(id)
 );
 
-CREATE TABLE bridal_shops (
+CREATE TABLE musics (
 id INT auto_increment NOT NULL,
 name VARCHAR(100) NOT NULL,
-address VARCHAR(100) NOT NULL,
 phone VARCHAR(15) NOT NULL,
 email VARCHAR(100) NOT NULL,
 website VARCHAR(100) NOT NULL,
 primary key(id)
 );
+
+CREATE TABLE venues (
+id INT auto_increment NOT NULL,
+name VARCHAR(100) NOT NULL,
+address VARCHAR(100) NOT NULL,
+phone VARCHAR(15) NOT NULL,
+website VARCHAR(100) NOT NULL,
+primary key(id)
+);
+
+
+
+
+
