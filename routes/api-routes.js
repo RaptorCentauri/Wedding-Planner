@@ -1,4 +1,3 @@
-// const account = require('../models/accounts.js');
 const bridalShop = require('../models/bridalShops.js');
 const flower = require('../models/flowers.js');
 const music = require('../models/music.js');

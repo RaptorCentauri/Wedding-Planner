@@ -55,23 +55,24 @@
 
 $(document).ready(function(){
 
-  // this is the venue button
+  // this is the venue button on click of the venue button, 
   $(".venue-class").on("click", function(event){
+    // empty the results row
     $(".resultsRow").empty();
         event.preventDefault();
-
+      // this is an ajax request that will retrive data from the routes that point to the venues db sql => model => orm => connection
       $.get( "/api/venues", function(data){
-
+        // this is a for loop that will thke this data and store it in variables to be put into the DOM with JQuery
         for(var i = 0; i < data.length; i ++){
           var venName = data[i].name;
           var venAdd = data[i].address;
           var venPhone = data[i].phone;
           var venSite = data[i].website;
-          console.log(venName);
-          console.log(i);
-
-          $(".resultsRow").append(
-            `<div class="col s6 m6 l4">
+          // console.log(venName);
+          // console.log(i);
+          
+          addtoPlanner(venName);
+          $(".resultsRow").append(`<div class="col s6 m6 l4">
               <div class="card alice-blue">
                 <div class="card-content grey-text text-darken-3">
                   <p class="title venue-name">${venName}</span>
@@ -80,15 +81,14 @@ $(document).ready(function(){
                     <p class="title venue-site">${venSite}</p>
                 </div>
                 <div class="card-action">
-                  <a class="addVenuePlanner" data-id="${i}" href="#">Add to Planner</a>
-
+                  <a class="addVenuePlanner" data-id="${i}" text="${venName}" href="#">Add to Planner</a>
+                  
                 </div>
               </div>
-            </div>`
-          );
-
+            </div>`);
+  
         }
-
+     
       }, "json");
 
 
@@ -108,9 +108,8 @@ $(document).ready(function(){
           var floEmail = data[i].email;
           var floSite = data[i].website;
           // console.log(floName);
-
-        $(".resultsRow").append(
-          `<div class="col s6 m6 l4">
+        addtoPlanner(floName);
+        $(".resultsRow").append(`<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
               <p class="title flowers-name">${floName}</span>
@@ -120,11 +119,10 @@ $(document).ready(function(){
             </div>
             <div class="card-action">
 
-              <a class="addFlowersPlanner" data-id="${i}" href="#">Add to Planner</a>
+              <a class="addFlowerPlanner" data-id="${i}" text="${floName}" href="#">Add to Planner</a>
             </div>
           </div>
-        </div>`
-        );
+        </div>`);
 
         }
       }, "json");
@@ -145,9 +143,8 @@ $(".music-class").on("click", function(event){
           var musEmail = data[i].email;
           var musSite = data[i].website;
           // console.log(musName);
-
-        $(".resultsRow").append(
-          `<div class="col s6 m6 l4">
+        addtoPlanner(musName);
+        $(".resultsRow").append(`<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
               <p class="title music-name">${musName}</span>
@@ -157,11 +154,10 @@ $(".music-class").on("click", function(event){
             </div>
             <div class="card-action">
 
-              <a class="addMusicPlanner" data-id="${i}" href="#">Add to Planner</a>
+              <a class="addMusicPlanner" data-id="${i}" text="${musName}" href="#">Add to Planner</a>
             </div>
           </div>
-        </div>`
-        );
+        </div>`);
 
         }
       }, "json");
@@ -181,11 +177,8 @@ $(".bridal-class").on("click", function(event) {
           var briPhone = data[i].phone;
           var briEmail = data[i].email;
           var briSite = data[i].website;
-  
-          // console.log(briName);
-
-          $(".resultsRow").append(
-            `<div class="col s6 m6 l4">
+          addtoPlanner(briName);
+          $(".resultsRow").append(`<div class="col s6 m6 l4">
               <div class="card alice-blue">
                 <div class="card-content grey-text text-darken-3">
                   <p class="title bridal-name">${briName}</span>
@@ -196,38 +189,65 @@ $(".bridal-class").on("click", function(event) {
                 </div>
                 <div class="card-action">
 
-                  <a class="addBridalPlanner" data-id="${i}" href="#">Add to Planner</a>
+                  <a class="addBridalPlanner" data-id="${i}" text="${briName}" href="#">Add to Planner</a>
                 </div>
               </div>
-            </div>`
-            );
+            </div>`);
         }
       }, "json");
       })
 });
 
-$(document.body).on("click", ".addVenuePlanner", function () {
-  console.log("click working");
+// $(document.body).on("click", ".addBridalPlanner", function () {
+//   console.log("click working");
+
+//   console.log('This is in this: ', this, ' so this is working ');
+//   // now how do we add the venue with the data-id="1" to the planner with jquery?
+//   $(".bridalPlanner").append(this);
+// })
+
+function addtoPlanner(vendorName){
+
+  $(".addVenuePlanner",).on("click", function (data){
+    traversedVar = data.currentTarget.attributes.text.textContent;
+    console.log(this);
+    $(".venuePlanner").append("<ul>");
+    $(".venuePlanner").append("<li>" + traversedVar + "</li>");
+  })
+
+  $(".addFlowerPlanner", ).on("click", function (data) {
+    traversedVar = data.currentTarget.attributes.text.textContent;
+    console.log(this);
+    $(".flowerPlanner").append("<ul>");
+    $(".flowerPlanner").append("<li>" + traversedVar + "</li>");
+  })
+
+  $(".addMusicPlanner", ).on("click", function (data) {
+    traversedVar = data.currentTarget.attributes.text.textContent;
+    console.log(this);
+    $(".musicPlanner").append("<ul>");
+    $(".musicPlanner").append("<li>" + traversedVar + "</li>");
+  })
+
+  $(".addBridalPlanner", ).on("click", function (data) {
+    traversedVar = data.currentTarget.attributes.text.textContent;
+    console.log(this);
+    $(".bridalPlanner").append("<ul>");
+    $(".bridalPlanner").append("<li>" + traversedVar + "</li>");
+
+  })
+
+}
+
+    //   $(".bridalPlanner").append(`<ul>`);
+    // for (i = 0; i < data.length; i++) {
+    //   $(".bridalPlanner").append(`<li>${data[i].name}</li>`);
+    // }
+    // $(".bridalPlanner").append(`</ul>`);
+    //   console.log(data);
+    // })
 
 
+$('.collapsible').collapsible();
+$(".button-collapse").sideNav();
 
-  console.log('This is in this: ', this, ' so this is working ');
-  // now how do we add the venue with the data-id="1" to the planner with jquery?
-  $(".venuePlanner").html(this);
-})
-
- $('.collapsible').collapsible();
- $(".button-collapse").sideNav();
-
-
-// function recipeReturn(ID) {
-//         let queryURL = `https://api.yummly.com/v1/api/recipe/${ID}?${yummlyID}&${yummlyKey}`;
-//         $.ajax({
-//             url: queryURL,
-//             method: "GET"
-//         }).done(function(response) {
-//             let div = $(`<div class="col-md-6 col-xs-12 recipe-div">`);
-//             div.append(`<div class="recipe-name"><a href=${response.attribution.url} target="_blank" title="${response.name}"><h4>${response.name}</h4></a></div>`)
-//                 .append(`<a href=${response.attribution.url} target="_blank"><img class="recipe-image" src=${response.images[0].imageUrlsBySize["360"]} /></a>`);
-//             $("#recipeHome").append(div);
-//         });

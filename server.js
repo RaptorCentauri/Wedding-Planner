@@ -1,12 +1,9 @@
 //Dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
-// const session = require('express-session');
 
 let app = express();
 let port = process.env.PORT || 8080;
-
-// app.use(session({secret: "mysupersecret"}));
 
 //set up bodyParser
 app.use(bodyParser.json());
