@@ -56,17 +56,5 @@ orm = {
     });
   },
 
-  verify: function(tableName, colOne, colTwo, userName, password, cb) {
-    let queryString = `SELECT * FROM ${tableName} WHERE ${colOne}="${userName}" AND ${colTwo}="${password}"`
-
-    connection.query(queryString, function(err, result){
-      if (err){
-        throw err;
-      }
-        cb(result);
-    });
-
-  }
-
 }
 module.exports = orm;

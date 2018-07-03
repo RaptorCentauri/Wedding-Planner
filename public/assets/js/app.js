@@ -1,136 +1,59 @@
 
-function isLoggedIn(log, groom, bride) {
-  if(log){
-    $(".coupleName").html(` back ${groom} & ${bride}!`);
-    getUserVenues();
-    getUserFlowers();
-    getUserBridalShops();
-    getUserMusic();
-    return true;
-  }
-  else {
-    return false;
-  }
-}
+// function getUserVenues() {
+//   $.get(`/api/chosenVenues`)
+//     .done(function(data) {
+//         $(".venuePlanner").empty();
+//         $(".venuePlanner").append(`<ul>`);
+//       for (i = 0; i < data.length; i++) {
+//         $(".venuePlanner").append(`<li>${data[i].name}</li>`);
+//       }
+//       $(".venuePlanner").append(`</ul>`);
 
-function getUserVenues() {
-  let account = {
-    accountID: sessionStorage.getItem('coupleID')
-  }
-  $.get(`/api/chosenVenues`, account)
-    .done(function(data) {
-        $(".venuePlanner").empty();
-        $(".venuePlanner").append(`<ul>`);
-      for (i = 0; i < data.length; i++) {
-        $(".venuePlanner").append(`<li>${data[i].name}</li>`);
-      }
-      $(".venuePlanner").append(`</ul>`);
+//       console.log(data.name);
+//     })
+// }
 
-      console.log(data.name);
-    })
-}
+// function getUserFlowers() {
+//   $.get(`/api/chosenFlowers`)
+//     .done(function(data) {
+//       $(".flowerPlanner").empty();
+//       $(".flowerPlanner").append(`<ul>`);
+//     for (i = 0; i < data.length; i++) {
+//       $(".flowerPlanner").append(`<li>${data[i].name}</li>`);
+//     }
+//     $(".flowerPlanner").append(`</ul>`);
+//       console.log(data);
+//     })
+// }
 
-function getUserFlowers() {
-  let account = {
-    accountID: sessionStorage.getItem('coupleID')
-  }
-  $.get(`/api/chosenFlowers`, account)
-    .done(function(data) {
-      $(".flowerPlanner").empty();
-      $(".flowerPlanner").append(`<ul>`);
-    for (i = 0; i < data.length; i++) {
-      $(".flowerPlanner").append(`<li>${data[i].name}</li>`);
-    }
-    $(".flowerPlanner").append(`</ul>`);
-      console.log(data);
-    })
-}
+// function getUserBridalShops() {
+//   $.get(`/api/chosenBridalShops`)
+//     .done(function(data) {
+//       $(".bridalPlanner").empty();
+//       $(".bridalPlanner").append(`<ul>`);
+//     for (i = 0; i < data.length; i++) {
+//       $(".bridalPlanner").append(`<li>${data[i].name}</li>`);
+//     }
+//     $(".bridalPlanner").append(`</ul>`);
+//       console.log(data);
+//     })
+// }
 
-function getUserBridalShops() {
-  let account = {
-    accountID: sessionStorage.getItem('coupleID')
-  }
-  $.get(`/api/chosenBridalShops`, account)
-    .done(function(data) {
-      $(".bridalPlanner").empty();
-      $(".bridalPlanner").append(`<ul>`);
-    for (i = 0; i < data.length; i++) {
-      $(".bridalPlanner").append(`<li>${data[i].name}</li>`);
-    }
-    $(".bridalPlanner").append(`</ul>`);
-      console.log(data);
-    })
-}
-
-function getUserMusic() {
-  let account = {
-    accountID: sessionStorage.getItem('coupleID')
-  }
-  $.get(`/api/chosenMusic`, account)
-    .done(function(data) {
-      $(".musicPlanner").empty();
-      $(".musicPlanner").append(`<ul>`);
-    for (i = 0; i < data.length; i++) {
-      $(".musicPlanner").append(`<li>${data[i].name}</li>`);
-    }
-    $(".musicPlanner").append(`</ul>`);
-      console.log(data);
-    })
-}
-
-
-
-
-
-
+// function getUserMusic() {
+//   $.get(`/api/chosenMusic`)
+//     .done(function(data) {
+//       $(".musicPlanner").empty();
+//       $(".musicPlanner").append(`<ul>`);
+//     for (i = 0; i < data.length; i++) {
+//       $(".musicPlanner").append(`<li>${data[i].name}</li>`);
+//     }
+//     $(".musicPlanner").append(`</ul>`);
+//       console.log(data);
+//     })
+// }
 
 
 $(document).ready(function(){
-
-  let loggedIn = sessionStorage.getItem('logged_in');
-
-let couple = {
-  coupleID: sessionStorage.getItem('coupleID'),
-  groom: sessionStorage.getItem('groom'),
-  bride: sessionStorage.getItem('bride'),
-}
-
-isLoggedIn(loggedIn, couple.groom, couple.bride);
-
-
-
-  $("#login-button").on("click", function(event) {
-
-    event.preventDefault();
-
-
-    let loginAuth = {
-      username: $("#email").val(),
-      password: $("#password").val()
-    }
-
-    console.log(loginAuth);
-
-
-    $.post("/login", loginAuth).done(function(data){
-      // console.log("NEW LINE");
-      // console.log(data);
-      couple.groom = data[0].groom;
-      couple.bride = data[0].bride;
-      couple.coupleID = data[0].id;
-      loggedIn = true;
-      sessionStorage.setItem('logged_in', loggedIn);
-      sessionStorage.setItem('coupleID', couple.coupleID);
-      sessionStorage.setItem('groom', couple.groom);
-      sessionStorage.setItem('bride', couple.bride);
-      isLoggedIn(loggedIn, couple.groom, couple.bride);
-    });
-  })
-
-
-
-
-
 
   // this is the venue button
   $(".venue-class").on("click", function(event){
