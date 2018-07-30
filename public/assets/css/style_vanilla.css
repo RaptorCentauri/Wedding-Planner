@@ -109,3 +109,8 @@ p.a {
 p.title.bridal-name, p.title.venue-name, p.title.flowers-name, p.title.music-name {
   font-weight: bold;
 }
+
+.custom-coll {
+  background-color: aliceblue;
+}
+
