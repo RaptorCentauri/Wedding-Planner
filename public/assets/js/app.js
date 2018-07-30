@@ -1,58 +1,3 @@
-
-// function getUserVenues() {
-//   $.get(`/api/chosenVenues`)
-//     .done(function(data) {
-//         $(".venuePlanner").empty();
-//         $(".venuePlanner").append(`<ul>`);
-//       for (i = 0; i < data.length; i++) {
-//         $(".venuePlanner").append(`<li>${data[i].name}</li>`);
-//       }
-//       $(".venuePlanner").append(`</ul>`);
-
-//       console.log(data.name);
-//     })
-// }
-
-// function getUserFlowers() {
-//   $.get(`/api/chosenFlowers`)
-//     .done(function(data) {
-//       $(".flowerPlanner").empty();
-//       $(".flowerPlanner").append(`<ul>`);
-//     for (i = 0; i < data.length; i++) {
-//       $(".flowerPlanner").append(`<li>${data[i].name}</li>`);
-//     }
-//     $(".flowerPlanner").append(`</ul>`);
-//       console.log(data);
-//     })
-// }
-
-// function getUserBridalShops() {
-//   $.get(`/api/chosenBridalShops`)
-//     .done(function(data) {
-//       $(".bridalPlanner").empty();
-//       $(".bridalPlanner").append(`<ul>`);
-//     for (i = 0; i < data.length; i++) {
-//       $(".bridalPlanner").append(`<li>${data[i].name}</li>`);
-//     }
-//     $(".bridalPlanner").append(`</ul>`);
-//       console.log(data);
-//     })
-// }
-
-// function getUserMusic() {
-//   $.get(`/api/chosenMusic`)
-//     .done(function(data) {
-//       $(".musicPlanner").empty();
-//       $(".musicPlanner").append(`<ul>`);
-//     for (i = 0; i < data.length; i++) {
-//       $(".musicPlanner").append(`<li>${data[i].name}</li>`);
-//     }
-//     $(".musicPlanner").append(`</ul>`);
-//       console.log(data);
-//     })
-// }
-
-
 $(document).ready(function(){
 
   // this is the venue button on click of the venue button, 
@@ -68,10 +13,6 @@ $(document).ready(function(){
           var venAdd = data[i].address;
           var venPhone = data[i].phone;
           var venSite = data[i].website;
-          // console.log(venName);
-          // console.log(i);
-          
-          addtoPlanner(venName);
           $(".resultsRow").append(`<div class="col s6 m6 l4">
               <div class="card alice-blue">
                 <div class="card-content grey-text text-darken-3">
@@ -81,14 +22,13 @@ $(document).ready(function(){
                     <p class="title venue-site">${venSite}</p>
                 </div>
                 <div class="card-action">
-                  <a class="addVenuePlanner" data-id="${i}" text="${venName}" href="#">Add to Planner</a>
-                  
+                  <a class="addVenuePlanner" data-id="${i}" text="${venName}" address="${venAdd}" phone="${venPhone}" web="${venSite}">Add to Planner</a>
                 </div>
               </div>
             </div>`);
   
         }
-     
+        addtoPlanner();
       }, "json");
 
 
@@ -107,8 +47,6 @@ $(document).ready(function(){
           var floPhone = data[i].phone;
           var floEmail = data[i].email;
           var floSite = data[i].website;
-          // console.log(floName);
-        addtoPlanner(floName);
         $(".resultsRow").append(`<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
@@ -119,20 +57,21 @@ $(document).ready(function(){
             </div>
             <div class="card-action">
 
-              <a class="addFlowerPlanner" data-id="${i}" text="${floName}" href="#">Add to Planner</a>
+              <a class="addFlowerPlanner" data-id="${i}" text="${floName}" address="${floEmail}" phone="${floPhone}" web="${floSite}" href="#">Add to Planner</a>
+
             </div>
           </div>
         </div>`);
-
         }
+        addtoPlanner();
       }, "json");
   })
 
 
 // this is the music button
 $(".music-class").on("click", function(event){
-   $(".resultsRow").empty();
-       event.preventDefault();
+  $(".resultsRow").empty();
+      event.preventDefault();
 
     $.get( "/api/musics", function(data){
       console.log("DATA: ", data);
@@ -143,7 +82,7 @@ $(".music-class").on("click", function(event){
           var musEmail = data[i].email;
           var musSite = data[i].website;
           // console.log(musName);
-        addtoPlanner(musName);
+
         $(".resultsRow").append(`<div class="col s6 m6 l4">
           <div class="card alice-blue">
             <div class="card-content grey-text text-darken-3">
@@ -153,13 +92,12 @@ $(".music-class").on("click", function(event){
               <p class="title music-cost">${musSite}</p>
             </div>
             <div class="card-action">
-
-              <a class="addMusicPlanner" data-id="${i}" text="${musName}" href="#">Add to Planner</a>
+              <a class="addMusicPlanner" data-id="${i}" text="${musName}" address="${musEmail}" phone="${musPhone}" web="${musSite}" href="#">Add to Planner</a>
             </div>
           </div>
         </div>`);
-
         }
+        addtoPlanner();
       }, "json");
   })
 
@@ -167,7 +105,6 @@ $(".music-class").on("click", function(event){
 $(".bridal-class").on("click", function(event) {
   $(".resultsRow").empty();
       event.preventDefault();
-
       $.get("/api/bridalshops", function(data){
         console.log("DATA: ", data);
         console.log("this is a get request");
@@ -177,7 +114,6 @@ $(".bridal-class").on("click", function(event) {
           var briPhone = data[i].phone;
           var briEmail = data[i].email;
           var briSite = data[i].website;
-          addtoPlanner(briName);
           $(".resultsRow").append(`<div class="col s6 m6 l4">
               <div class="card alice-blue">
                 <div class="card-content grey-text text-darken-3">
@@ -188,64 +124,59 @@ $(".bridal-class").on("click", function(event) {
                     <p class="title bridal-cost">${briSite}</p>
                 </div>
                 <div class="card-action">
-
-                  <a class="addBridalPlanner" data-id="${i}" text="${briName}" href="#">Add to Planner</a>
+                  <a class="addBridalPlanner" data-id="${i}" text="${briName}" address="${briAdd}" phone="${briPhone}" web="${briSite}" href="#">Add to Planner</a>
                 </div>
               </div>
             </div>`);
-        }
+        } 
+        addtoPlanner();
       }, "json");
       })
 });
 
-// $(document.body).on("click", ".addBridalPlanner", function () {
-//   console.log("click working");
+function addtoPlanner(){
 
-//   console.log('This is in this: ', this, ' so this is working ');
-//   // now how do we add the venue with the data-id="1" to the planner with jquery?
-//   $(".bridalPlanner").append(this);
-// })
-
-function addtoPlanner(vendorName){
-
-  $(".addVenuePlanner",).on("click", function (data){
-    traversedVar = data.currentTarget.attributes.text.textContent;
-    console.log(this);
+  $(".addVenuePlanner").on("click", function (data){
+    console.log("in the data ob: ", data);
+    dataName = data.currentTarget.attributes.text.textContent;
+    dataAdd = data.currentTarget.attributes.address.textContent;
+    dataPhone = data.currentTarget.attributes.phone.textContent;
+    dataWeb = data.currentTarget.attributes.web.textContent;
     $(".venuePlanner").append("<ul>");
-    $(".venuePlanner").append("<li>" + traversedVar + "</li>");
+    $(".venuePlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone +  "." + "</li>");
+    $(".venuePlanner").append("<li>"+ dataWeb + "</li>" + "<br>")
   })
 
-  $(".addFlowerPlanner", ).on("click", function (data) {
-    traversedVar = data.currentTarget.attributes.text.textContent;
-    console.log(this);
+  $(".addFlowerPlanner").on("click", function (data) {
+    dataName = data.currentTarget.attributes.text.textContent;
+    dataAdd = data.currentTarget.attributes.address.textContent;
+    dataPhone = data.currentTarget.attributes.phone.textContent;
+    dataWeb = data.currentTarget.attributes.web.textContent;
     $(".flowerPlanner").append("<ul>");
-    $(".flowerPlanner").append("<li>" + traversedVar + "</li>");
+    $(".flowerPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + "." + "</li>");
+    $(".flowerPlanner").append("<li>" + dataWeb + "</li>" + "<br>")
   })
 
   $(".addMusicPlanner", ).on("click", function (data) {
-    traversedVar = data.currentTarget.attributes.text.textContent;
-    console.log(this);
+    dataName = data.currentTarget.attributes.text.textContent;
+    dataAdd = data.currentTarget.attributes.address.textContent;
+    dataPhone = data.currentTarget.attributes.phone.textContent;
+    dataWeb = data.currentTarget.attributes.web.textContent;
     $(".musicPlanner").append("<ul>");
-    $(".musicPlanner").append("<li>" + traversedVar + "</li>");
+    $(".musicPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + "." + "</li>");
+    $(".musicPlanner").append("<li>" + dataWeb + "</li>" + "<br>")
   })
 
   $(".addBridalPlanner", ).on("click", function (data) {
-    traversedVar = data.currentTarget.attributes.text.textContent;
-    console.log(this);
+    dataName = data.currentTarget.attributes.text.textContent;
+    dataAdd = data.currentTarget.attributes.address.textContent;
+    dataPhone = data.currentTarget.attributes.phone.textContent;
+    dataWeb = data.currentTarget.attributes.web.textContent;
     $(".bridalPlanner").append("<ul>");
-    $(".bridalPlanner").append("<li>" + traversedVar + "</li>");
-
+    $(".bridalPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + "." + "</li>");
+    $(".bridalPlanner").append("<li>" + dataWeb + "</li>" + "<br>")
   })
-
 }
-
-    //   $(".bridalPlanner").append(`<ul>`);
-    // for (i = 0; i < data.length; i++) {
-    //   $(".bridalPlanner").append(`<li>${data[i].name}</li>`);
-    // }
-    // $(".bridalPlanner").append(`</ul>`);
-    //   console.log(data);
-    // })
 
 
 $('.collapsible').collapsible();
