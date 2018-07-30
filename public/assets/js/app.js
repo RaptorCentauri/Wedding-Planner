@@ -143,8 +143,7 @@ function addtoPlanner(){
     dataPhone = data.currentTarget.attributes.phone.textContent;
     dataWeb = data.currentTarget.attributes.web.textContent;
     $(".venuePlanner").append("<ul>");
-    $(".venuePlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone +  "." + "</li>");
-    $(".venuePlanner").append("<li>"+ dataWeb + "</li>" + "<br>")
+    $(".venuePlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + ",  " + dataWeb + "</li> <br>");
   })
 
   $(".addFlowerPlanner").on("click", function (data) {
@@ -153,8 +152,7 @@ function addtoPlanner(){
     dataPhone = data.currentTarget.attributes.phone.textContent;
     dataWeb = data.currentTarget.attributes.web.textContent;
     $(".flowerPlanner").append("<ul>");
-    $(".flowerPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + "." + "</li>");
-    $(".flowerPlanner").append("<li>" + dataWeb + "</li>" + "<br>")
+    $(".flowerPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + ",  " + dataWeb + "</li> <br>");
   })
 
   $(".addMusicPlanner", ).on("click", function (data) {
@@ -163,8 +161,7 @@ function addtoPlanner(){
     dataPhone = data.currentTarget.attributes.phone.textContent;
     dataWeb = data.currentTarget.attributes.web.textContent;
     $(".musicPlanner").append("<ul>");
-    $(".musicPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + "." + "</li>");
-    $(".musicPlanner").append("<li>" + dataWeb + "</li>" + "<br>")
+    $(".musicPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + ",  " + dataWeb + "</li> <br>");
   })
 
   $(".addBridalPlanner", ).on("click", function (data) {
@@ -173,8 +170,7 @@ function addtoPlanner(){
     dataPhone = data.currentTarget.attributes.phone.textContent;
     dataWeb = data.currentTarget.attributes.web.textContent;
     $(".bridalPlanner").append("<ul>");
-    $(".bridalPlanner").append("<li>" + dataName + ",  " + dataAdd + ",  " + dataPhone + "." + "</li>");
-    $(".bridalPlanner").append("<li>" + dataWeb + "</li>" + "<br>")
+    $(".bridalPlanner").append("<li>" + dataName + ",   " + dataAdd + ",   " + dataPhone + ",  " + dataWeb + "</li> <br>");
   })
 }
 
